@@ -418,9 +418,19 @@ function Landing() {
         <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
           <Reveal>
             <div>
-              <div className="flex aspect-[4/5] items-center justify-center rounded-2xl border border-dashed border-brand/40 bg-surface/60 p-8 text-center">
-                <Placeholder>{author.photo}</Placeholder>
-              </div>
+              {author.photo && !author.photo.includes("[") ? (
+                <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-surface/60">
+                  <img
+                    src={author.photo}
+                    alt="Nicolas"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="flex aspect-[4/5] items-center justify-center rounded-2xl border border-dashed border-brand/40 bg-surface/60 p-8 text-center">
+                  <Placeholder>{author.photo}</Placeholder>
+                </div>
+              )}
               <div className="mt-6 grid grid-cols-3 gap-4">
                 {author.facts.map((f) => (
                   <div key={f.label} className="rounded-lg border border-border p-4">
