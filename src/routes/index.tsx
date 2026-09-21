@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/Reveal";
+import { ModulesCarousel } from "@/components/ModulesCarousel";
 import {
   author,
   brand,
