@@ -7,7 +7,13 @@ import type { ModuleSlide } from "@/content/nce";
  * Para publicar as artes definitivas, basta preencher `src` em `modules.slides`
  * (src/content/nce.ts) com a URL/import da imagem.
  */
-export function ModulesCarousel({ slides }: { slides: ModuleSlide[] }) {
+export function ModulesCarousel({
+  slides,
+  itemLabel = "Módulo",
+}: {
+  slides: ModuleSlide[];
+  itemLabel?: string;
+}) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const [atStart, setAtStart] = useState(true);
@@ -90,7 +96,7 @@ export function ModulesCarousel({ slides }: { slides: ModuleSlide[] }) {
       <div className="mb-6 flex justify-end gap-3">
         <button
           type="button"
-          aria-label="Módulo anterior"
+          aria-label={`${itemLabel} anterior`}
           onClick={() => scrollToIndex(active - 1)}
           disabled={atStart}
           className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background/70 text-foreground transition-all duration-300 hover:border-brand hover:text-brand disabled:pointer-events-none disabled:opacity-30"
@@ -101,7 +107,7 @@ export function ModulesCarousel({ slides }: { slides: ModuleSlide[] }) {
         </button>
         <button
           type="button"
-          aria-label="Próximo módulo"
+          aria-label={`Próximo ${itemLabel.toLocaleLowerCase("pt-BR")}`}
           onClick={() => scrollToIndex(active + 1)}
           disabled={atEnd}
           className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background/70 text-foreground transition-all duration-300 hover:border-brand hover:text-brand disabled:pointer-events-none disabled:opacity-30"
@@ -171,7 +177,7 @@ export function ModulesCarousel({ slides }: { slides: ModuleSlide[] }) {
           <button
             key={s.id}
             type="button"
-            aria-label={`Ir para o módulo ${i + 1}`}
+            aria-label={`Ir para ${itemLabel.toLocaleLowerCase("pt-BR")} ${i + 1}`}
             onClick={() => scrollToIndex(i)}
             className={`h-1.5 rounded-full transition-all duration-500 ${
               i === active ? "w-7 bg-brand" : "w-1.5 bg-border hover:bg-muted-foreground"
