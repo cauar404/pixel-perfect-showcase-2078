@@ -1,7 +1,6 @@
 /**
  * Conteúdo da landing page do NCE.
- * Tudo que ainda depende de informação oficial do Nicolas está marcado com [ ].
- * Basta substituir os textos aqui — o layout não precisa ser refeito.
+ * O que ainda depende de informação oficial do Nicolas está marcado com [ ].
  */
 
 export const brand = {
@@ -25,11 +24,11 @@ export const hero = {
 
 export const hook = {
   eyebrow: "Primeiro, um ajuste de perspectiva",
-  headline: "Você não precisa de mais uma plataforma para aprender.",
+  headline: "Vender em marketplace e operar um negócio são duas coisas diferentes.",
   body: [
-    "Precisa entender o que acontece por trás de uma operação.",
-    "Saber onde clicar dentro de um painel é a parte mais fácil do e-commerce. O que separa quem vende de quem sustenta um negócio é o que ninguém mostra na tela: como o produto foi escolhido, como o preço foi definido, como o estoque conversa com o caixa, como uma decisão é tomada quando o número cai.",
-    "O NCE começa exatamente aí — na camada que fica invisível quando você só aprende ferramentas.",
+    "Cadastrar um produto na Shopee ou no Mercado Livre é simples. Milhares de pessoas fazem isso todos os dias e conseguem a primeira venda em poucas semanas.",
+    "O que é difícil é o que vem depois: escolher o produto certo pelo motivo certo, precificar sem corroer a margem, sustentar o anúncio quando o CPA sobe, decidir quanto comprar, onde guardar, quando contratar e como manter a parte fiscal em ordem enquanto o volume cresce.",
+    "É nessa camada — a que não aparece no painel do marketplace — que a maioria das operações trava. E é exatamente aí que o NCE começa.",
   ],
 };
 
@@ -37,19 +36,19 @@ export const problem = {
   eyebrow: "O problema",
   headline: "O problema quase nunca é falta de informação.",
   intro:
-    "Quem está tentando crescer no e-commerce hoje costuma saber mais do que imagina. O que falta é ordem para usar o que já sabe.",
+    "Quem está tentando crescer dentro dos marketplaces hoje costuma saber mais do que imagina. O que falta é ordem para usar o que já sabe.",
   items: [
     {
       title: "O consumo vira rotina",
-      text: "Mais um vídeo, mais um conteúdo, mais um print de resultado. A sensação de estar evoluindo é real, mas a operação continua no mesmo lugar.",
+      text: "Mais um vídeo sobre Shopee, mais um conteúdo sobre Mercado Livre, mais um print de faturamento. A sensação de evolução é real, mas a operação continua no mesmo lugar.",
     },
     {
       title: "A direção muda toda semana",
-      text: "Uma estratégia nova aparece, você troca de rumo, abandona o que estava em andamento — e recomeça sem nunca terminar um ciclo.",
+      text: "Uma estratégia nova aparece, você troca de rumo, abandona o anúncio que ainda estava maturando — e recomeça sem nunca fechar um ciclo.",
     },
     {
       title: "Tudo parece prioridade",
-      text: "Produto, anúncio, preço, estoque, atendimento. Sem critério para escolher, a energia se espalha e nada avança de verdade.",
+      text: "Produto, anúncio, ads, preço, estoque, atendimento, nota fiscal. Sem critério para escolher, a energia se espalha e nada avança de verdade.",
     },
     {
       title: "Decisão no achismo",
@@ -57,138 +56,141 @@ export const problem = {
     },
   ],
   close:
-    "Isso não se resolve com mais conteúdo. Resolve-se com método: uma forma consistente de pensar, decidir e executar.",
+    "Isso não se resolve com mais conteúdo. Resolve-se com método: uma forma consistente de analisar, decidir e executar.",
 };
 
 export const turn = {
   eyebrow: "A virada",
-  headline: "Existe uma diferença entre saber sobre e-commerce e saber operar e-commerce.",
+  headline: "Saber vender é o começo. Saber operar é o que sustenta.",
   body: [
-    "Saber sobre é reconhecer termos, acompanhar tendências, entender o que os outros estão fazendo.",
-    "Saber operar é conseguir transformar isso em decisão dentro da sua realidade, com o seu capital, o seu tempo e o seu nível de risco.",
-    "Informação isolada não cria operação. O que cria operação é sequência.",
+    "Vender é conseguir um pedido. Operar é entender por que aquele pedido aconteceu, quanto ele realmente deixou e o que precisa existir para que ele se repita em escala.",
+    "Quem opera com método consegue olhar para uma queda de vendas e saber onde procurar: no anúncio, no preço, na verba de mídia, na concorrência ou na ruptura de estoque.",
+    "Foi essa diferença que fez o Nicolas sair de tentativas frustradas para uma operação que hoje gira em outro patamar. Não foi um atalho — foi sequência.",
   ],
   steps: [
-    { n: "01", title: "Método", text: "A forma de enxergar o negócio antes de agir." },
-    { n: "02", title: "Processo", text: "O caminho que transforma decisão em rotina." },
-    { n: "03", title: "Execução", text: "O trabalho feito com padrão, não com improviso." },
-    { n: "04", title: "Decisão", text: "O critério para continuar, corrigir ou cortar." },
+    { n: "01", title: "Análise", text: "Ler o mercado e escolher produto com critério, não por palpite." },
+    { n: "02", title: "Estrutura", text: "Anúncio, preço, estoque e processo montados para aguentar volume." },
+    { n: "03", title: "Tráfego", text: "Publicidade dentro dos marketplaces com leitura de números." },
+    { n: "04", title: "Escala", text: "Gestão, equipe, espaço físico e fiscal acompanhando o crescimento." },
   ],
 };
 
 export const what = {
   eyebrow: "O que é o NCE",
-  headline: "Foi para isso que nasceu o NCE.",
+  headline: "O NCE é a operação do Nicolas, aberta e transformada em método.",
   body: [
-    "O NCE é o método que o Nicolas desenvolveu a partir da própria prática para organizar o e-commerce como negócio — e não como uma coleção de táticas soltas.",
-    "Ele não é um curso sobre um marketplace específico. Mercado Livre, Shopee, Amazon ou qualquer outro canal são apenas lugares onde a operação acontece. O que o NCE ensina é o raciocínio que funciona antes, durante e depois da escolha do canal.",
-    "Por isso o aluno não está comprando aulas. Está adquirindo uma forma estruturada de pensar, executar e decidir.",
+    "NCE significa Nicolas Ecommerce. É um treinamento que ensina, passo a passo, como estruturar, operar e escalar uma operação dentro dos marketplaces — com foco em Shopee e Mercado Livre.",
+    "Ele não para na parte que todo mundo mostra. Além de análise de mercado, criação de anúncios e publicidade, o NCE entra no que aparece quando a operação cresce: estrutura de galpão, momento certo de contratar, quando procurar um espaço maior, questões fiscais, uso de inteligência artificial e dashboards para acompanhar os números.",
+    "Por isso o aluno não está comprando um pacote de aulas sobre marketplace. Está tendo acesso às decisões que o Nicolas toma dentro da própria operação, organizadas em uma sequência que pode ser aplicada.",
   ],
   meaning: {
     label: "O que significa NCE",
-    value: "[SIGNIFICADO OFICIAL DA SIGLA NCE — a ser fornecido pelo Nicolas]",
+    value: "Nicolas Ecommerce — o método construído dentro da operação do próprio Nicolas.",
   },
   why: {
-    label: "Por que o Nicolas criou o método",
-    value: "[MOTIVO OFICIAL — a ser fornecido pelo Nicolas]",
+    label: "Por que o método existe",
+    value:
+      "Porque o Nicolas perdeu tempo e dinheiro tentando descobrir tudo sozinho, e só avançou quando passou a aprender com quem já operava. O NCE é essa redução de margem de erro organizada em um caminho.",
   },
   cards: [
     {
-      title: "Conhecimento organizado",
-      text: "O que hoje está espalhado em dezenas de fontes passa a ocupar um lugar claro dentro de uma estrutura.",
+      title: "Passo a passo aplicável",
+      text: "Do estudo de mercado à escala, na ordem em que cada etapa precisa acontecer dentro da operação.",
     },
     {
-      title: "Aplicação prática",
-      text: "Cada parte do método existe para virar ação na operação real — não para ser apenas assistida.",
+      title: "Bastidor de operação real",
+      text: "As estratégias, os processos e os erros de uma operação ativa em Shopee e Mercado Livre.",
     },
     {
-      title: "Visão de negócio",
-      text: "Você deixa de olhar só para a venda e passa a olhar para o sistema que produz a venda.",
+      title: "Visão de gestão",
+      text: "Dashboards, indicadores, equipe, estrutura e fiscal: o que segura o negócio quando o volume aumenta.",
     },
   ],
 };
 
 export const pillars = {
   eyebrow: "O método",
-  headline: "O método por trás da operação.",
+  headline: "As frentes que o NCE cobre.",
   intro:
-    "Os pilares oficiais do NCE serão detalhados pelo Nicolas. A estrutura abaixo já está pronta para recebê-los: cada pilar explica o que é, por que importa e o que muda na prática.",
+    "O treinamento é organizado por frentes da operação. Cada uma responde a uma pergunta prática de quem está montando ou ampliando as vendas em Shopee e Mercado Livre.",
   items: [
     {
       n: "01",
-      title: "[PILAR 01 DO NCE]",
-      what: "[O que é este pilar]",
-      why: "[Por que ele importa dentro da operação]",
-      result: "[O que muda para o aluno quando ele domina esta etapa]",
+      title: "Análise de mercado",
+      what: "Como estudar nichos, demanda e concorrência dentro dos marketplaces antes de comprar qualquer estoque.",
+      why: "A maior parte do prejuízo no e-commerce é decidida na escolha do produto, não na execução.",
+      result: "Você passa a escolher o que vender com argumento, e não porque viu alguém vendendo.",
     },
     {
       n: "02",
-      title: "[PILAR 02 DO NCE]",
-      what: "[O que é este pilar]",
-      why: "[Por que ele importa dentro da operação]",
-      result: "[O que muda para o aluno quando ele domina esta etapa]",
+      title: "Criação de anúncios",
+      what: "Estruturação de título, imagens, ficha e oferta para competir dentro da busca da Shopee e do Mercado Livre.",
+      why: "O anúncio é o vendedor. Ele decide se o clique vira pedido e se o algoritmo continua entregando.",
+      result: "Anúncios construídos por padrão, prontos para receber tráfego e serem otimizados.",
     },
     {
       n: "03",
-      title: "[PILAR 03 DO NCE]",
-      what: "[O que é este pilar]",
-      why: "[Por que ele importa dentro da operação]",
-      result: "[O que muda para o aluno quando ele domina esta etapa]",
+      title: "Publicidade",
+      what: "Como usar a mídia paga dos marketplaces e ler os números que ela devolve.",
+      why: "Investir sem leitura de indicadores é o jeito mais rápido de queimar caixa com sensação de movimento.",
+      result: "Clareza sobre quando aumentar, ajustar ou cortar investimento em um anúncio.",
     },
     {
       n: "04",
-      title: "[PILAR 04 DO NCE]",
-      what: "[O que é este pilar]",
-      why: "[Por que ele importa dentro da operação]",
-      result: "[O que muda para o aluno quando ele domina esta etapa]",
+      title: "Operação e gestão",
+      what: "Rotina de compras, estoque, expedição, atendimento e acompanhamento por dashboards — com apoio de inteligência artificial nos processos.",
+      why: "Sem processo, o crescimento vira desorganização: ruptura, atraso, reputação em risco.",
+      result: "Uma operação que funciona por rotina e por número, não por memória e improviso.",
     },
     {
       n: "05",
-      title: "[PILAR 05 DO NCE]",
-      what: "[O que é este pilar]",
-      why: "[Por que ele importa dentro da operação]",
-      result: "[O que muda para o aluno quando ele domina esta etapa]",
+      title: "Escala e estrutura",
+      what: "O que muda quando o volume cresce: estrutura de galpão, momento de contratar, espaço maior e questões fiscais.",
+      why: "Essa é a parte que quase ninguém mostra — e é onde a maioria trava depois dos primeiros bons meses.",
+      result: "Você entende o próximo degrau antes de chegar nele, em vez de descobrir no susto.",
     },
   ],
 };
 
 export const shift = {
   eyebrow: "O que muda",
-  headline: "A diferença aparece no jeito de pensar, antes de aparecer no número.",
+  headline: "A diferença aparece no jeito de decidir, antes de aparecer no faturamento.",
   intro:
-    "Método não é uma promessa de resultado. É uma mudança na qualidade das suas decisões — e é isso que muda a rotina de quem opera.",
+    "Método não é promessa de resultado. É mudança na qualidade das decisões — e é isso que muda a rotina de quem opera.",
   pairs: [
     {
-      before: "Testo coisas porque vi alguém testando.",
-      after: "Testo porque tenho uma hipótese e sei o que estou buscando.",
+      before: "Escolho produto pelo que vi alguém vendendo.",
+      after: "Escolho produto depois de analisar demanda, concorrência e margem.",
     },
     {
-      before: "Estou sempre atrás da próxima estratégia.",
-      after: "Tenho um processo e avalio o que já está rodando.",
+      before: "Coloco verba em ads e torço para vender.",
+      after: "Acompanho os indicadores e sei quando escalar ou cortar o anúncio.",
     },
     {
-      before: "Tenho informação, mas trava na hora de executar.",
-      after: "Tenho uma estrutura que transforma informação em próximo passo.",
+      before: "Cresci nas vendas e a operação virou bagunça.",
+      after: "Sei o que precisa estar de pé antes de aumentar o volume.",
     },
     {
-      before: "Quando o número cai, eu reajo no impulso.",
-      after: "Quando o número cai, eu sei onde olhar primeiro.",
+      before: "Estrutura, equipe e fiscal eu resolvo depois.",
+      after: "Entendo quando contratar, quando ampliar o espaço e o que o fiscal exige.",
     },
   ],
 };
 
 export const author = {
   eyebrow: "Quem está por trás",
-  headline: "Antes de ensinar o método, Nicolas precisou construir a própria experiência.",
+  headline: "Nicolas aprendeu a operar perdendo dinheiro antes de ganhar.",
   paragraphs: [
-    "[TRAJETÓRIA — como o Nicolas começou no e-commerce, o que tentou e o que deu errado no início]",
-    "[APRENDIZADOS — as decisões e os erros que deram origem à forma de operar que hoje é o NCE]",
-    "[EXPERIÊNCIA ATUAL — operações, canais e tempo de estrada]",
+    "Em 2023, logo depois de sair da escola, ele abriu o primeiro negócio: uma loja própria de dropshipping. Foram cerca de seis meses sem o retorno esperado, até encerrar o projeto.",
+    "Meses depois, montou com o irmão uma loja de moda masculina focada em camisetas básicas. Investiram mais de R$ 30 mil sem conhecimento e sem experiência — e o resultado foi estoque parado e publicidade sem retorno.",
+    "Em 2024 ele entrou nos marketplaces com outra postura: em vez de tentar descobrir tudo sozinho, foi buscar cursos e mentorias ao vivo com quem já operava. Segundo ele, foi isso que reduziu drasticamente sua margem de erro.",
+    "O primeiro mês fechou em torno de R$ 5 mil. No sexto mês, a operação já estava perto de R$ 100 mil mensais. Hoje, de acordo com os dados do próprio Nicolas, ela fatura cerca de R$ 800 mil por mês, com a meta de chegar a R$ 1 milhão.",
+    "Esses números são a trajetória dele, não uma previsão do seu resultado. O que o NCE entrega é o raciocínio e os processos que ele usa nessa operação.",
   ],
   facts: [
-    { label: "Tempo de operação", value: "[X anos]" },
-    { label: "Alunos", value: "[a confirmar]" },
-    { label: "Resultados", value: "[a confirmar]" },
+    { label: "Início nos marketplaces", value: "2024" },
+    { label: "Faturamento atual", value: "~R$ 800 mil/mês" },
+    { label: "Canais principais", value: "Shopee e ML" },
   ],
   photo: "[FOTO OFICIAL DO NICOLAS]",
 };
@@ -204,43 +206,38 @@ export const proof = {
     { type: "Estudo de caso", label: "[CASO 01 — ponto de partida, aplicação do método, situação atual]" },
     { type: "Vídeo", label: "[VÍDEO DE ALUNO 01]" },
     { type: "Feedback", label: "[FEEDBACK 01 — mensagem real de aluno]" },
-    { type: "Área de membros", label: "[SCREENSHOT DA ÁREA DE MEMBROS]" },
+    { type: "Operação", label: "[FOTO OU VÍDEO DA OPERAÇÃO REAL EM SÃO PAULO]" },
   ],
 };
 
 export const deliverables = {
   eyebrow: "O que você recebe",
-  headline: "O que está incluído — e por que cada parte existe.",
+  headline: "O que está incluído nos 12 meses — e por que cada parte existe.",
   items: [
     {
       title: "Método NCE completo",
-      what: "O método estruturado do início ao fim, na ordem em que ele deve ser aplicado.",
+      what: "O passo a passo da operação: análise de mercado, criação de anúncios, publicidade, gestão, escala, estrutura, contratação, fiscal, IA e dashboards.",
       why: "Porque conteúdo fora de ordem vira acúmulo. Em sequência, vira operação.",
     },
     {
-      title: "Área de membros",
-      what: "[DETALHES OFICIAIS DA ÁREA DE MEMBROS]",
-      why: "Um lugar único para estudar, revisar e acompanhar o que já foi aplicado.",
+      title: "12 meses de acesso",
+      what: "Um ano inteiro para estudar, aplicar e voltar ao material conforme a operação evolui.",
+      why: "Nenhuma operação amadurece em uma semana. Você revisita cada etapa no momento em que ela aparece.",
     },
     {
-      title: "Lista de fornecedores",
-      what: "[DETALHES OFICIAIS DA LISTA DE FORNECEDORES]",
-      why: "Reduz uma das etapas mais lentas de quem está montando ou ampliando a operação.",
+      title: "Conteúdos atualizados mensalmente",
+      what: "Novos materiais adicionados conforme surgem mudanças nos marketplaces e novidades na operação.",
+      why: "Shopee e Mercado Livre mudam. O método acompanha em vez de envelhecer.",
     },
     {
-      title: "Materiais de apoio",
-      what: "[MATERIAIS OFICIAIS — planilhas, checklists, modelos]",
-      why: "Transformam o método em ferramenta de trabalho do dia a dia.",
+      title: "Grupo de networking",
+      what: "Um grupo com os demais alunos do treinamento para troca entre quem está operando.",
+      why: "Conversar com quem enfrenta os mesmos problemas encurta decisões que sozinho demorariam semanas.",
     },
     {
-      title: "Suporte",
-      what: "[FORMATO OFICIAL DO SUPORTE]",
-      why: "Dúvida parada é execução parada. Suporte existe para destravar.",
-    },
-    {
-      title: "Bônus",
-      what: "[BÔNUS OFICIAIS]",
-      why: "Complementos que ampliam o método depois que a base está de pé.",
+      title: "Sorteios de visita à operação",
+      what: "Sorteios para conhecer pessoalmente a operação real do Nicolas em São Paulo.",
+      why: "Ver o galpão, o processo e a rotina funcionando explica o que nenhuma aula consegue descrever.",
     },
   ],
 };
@@ -249,37 +246,54 @@ export const objections = {
   eyebrow: "Antes de decidir",
   headline: "As dúvidas que aparecem antes de qualquer decisão honesta.",
   items: [
-    { q: "E se eu ainda estiver começando?", a: "[RESPOSTA OFICIAL — nível de entrada esperado]" },
-    { q: "E se eu já tenho experiência?", a: "[RESPOSTA OFICIAL — o que muda para quem já opera]" },
-    { q: "Preciso vender em algum marketplace específico?", a: "O NCE não é focado em um canal. [COMPLEMENTO OFICIAL]" },
-    { q: "Preciso ter uma operação pronta?", a: "[RESPOSTA OFICIAL]" },
-    { q: "Preciso investir muito dinheiro?", a: "[RESPOSTA OFICIAL sobre capital necessário]" },
-    { q: "Isso serve para quem já vende?", a: "[RESPOSTA OFICIAL]" },
+    {
+      q: "E se eu ainda estiver começando?",
+      a: "O método parte da análise de mercado, antes mesmo da primeira compra de estoque. Quem está começando segue a sequência desde o início, sem pular etapa.",
+    },
+    {
+      q: "E se eu já vendo em marketplace?",
+      a: "Quem já opera costuma usar mais as frentes de publicidade, gestão, escala e estrutura — as partes que normalmente travam depois dos primeiros meses bons.",
+    },
+    {
+      q: "O treinamento é focado em qual canal?",
+      a: "Em Shopee e Mercado Livre. É onde a operação do Nicolas funciona e onde os processos ensinados foram testados.",
+    },
+    {
+      q: "Isso é só teoria sobre marketplace?",
+      a: "Não. O conteúdo vem das decisões de uma operação ativa, incluindo estrutura de galpão, contratação, fiscal, uso de IA e dashboards.",
+    },
+    {
+      q: "Preciso investir muito dinheiro em estoque?",
+      a: "[RESPOSTA OFICIAL sobre capital inicial necessário]",
+    },
+    {
+      q: "Vou ter o mesmo resultado do Nicolas?",
+      a: "Os números citados são da trajetória dele, não uma promessa. O que você recebe é o método e o critério de decisão que ele usa — o resultado depende da sua execução.",
+    },
   ],
 };
 
 export const offer = {
   eyebrow: "A decisão",
-  headline: "Agora falta decidir se este é o momento de aplicar isso na sua operação.",
+  headline: "Agora é sobre aplicar isso dentro da sua operação.",
   lead: [
-    "Você viu onde a maioria trava: informação demais, direção de menos.",
-    "Viu a lógica do método — visão, estrutura, execução e decisão.",
-    "E viu o que está dentro dele.",
+    "Você viu onde a maioria trava: informação demais, critério de menos.",
+    "Viu as frentes que o método cobre — da análise de mercado à escala, estrutura e fiscal.",
+    "E viu de onde ele vem: uma operação real em Shopee e Mercado Livre.",
   ],
   includes: [
-    "Método NCE completo",
-    "Área de membros",
-    "Lista de fornecedores",
-    "Materiais de apoio",
-    "Suporte",
-    "Bônus",
+    "Método NCE completo, do estudo de mercado à escala",
+    "12 meses de acesso ao treinamento",
+    "Conteúdos atualizados mensalmente",
+    "Grupo de networking com os alunos",
+    "Sorteios para visitar a operação real em São Paulo",
   ],
-  includesNote: "Itens finais serão confirmados pelo Nicolas.",
+  includesNote: "Estes são os itens atuais da oferta. Nada além disso é prometido.",
   price: "R$ XXX",
   priceNote: "[CONDIÇÕES OFICIAIS DE PAGAMENTO]",
-  guaranteeTitle: "[GARANTIA OFICIAL DO NCE]",
+  guaranteeTitle: "[POLÍTICA OFICIAL DE GARANTIA]",
   guaranteeText:
-    "O prazo e as condições serão preenchidos com a política oficial. A ideia é simples: a decisão de entrar não deveria ser um risco desproporcional.",
+    "O prazo e as condições serão preenchidos com a política oficial informada pelo Nicolas.",
   urgencyNote:
     "Nenhum prazo, lote ou vaga limitada é exibido aqui até que exista uma condição real informada pelo Nicolas.",
 };
@@ -288,20 +302,47 @@ export const faq = {
   eyebrow: "FAQ",
   headline: "Perguntas frequentes.",
   items: [
-    { q: "Para quem é o NCE?", a: "[RESPOSTA OFICIAL — perfil de aluno]" },
-    { q: "Preciso já vender para entrar?", a: "[RESPOSTA OFICIAL]" },
-    { q: "O NCE é focado em algum marketplace?", a: "Não. O método é sobre operar e-commerce como negócio; os canais são consequência. [COMPLEMENTO OFICIAL]" },
-    { q: "O método serve para quem já tem operação?", a: "[RESPOSTA OFICIAL]" },
-    { q: "Como funciona a área de membros?", a: "[RESPOSTA OFICIAL]" },
-    { q: "O que exatamente está incluso?", a: "[RESPOSTA OFICIAL]" },
-    { q: "Como funciona o acesso?", a: "[RESPOSTA OFICIAL — prazo de acesso e liberação]" },
-    { q: "Existe suporte?", a: "[RESPOSTA OFICIAL]" },
-    { q: "Existe garantia?", a: "[RESPOSTA OFICIAL]" },
+    {
+      q: "O que significa NCE?",
+      a: "Nicolas Ecommerce. É o treinamento em que o Nicolas ensina como estruturar, operar e escalar uma operação dentro dos marketplaces.",
+    },
+    {
+      q: "Para quem é o NCE?",
+      a: "Para quem quer montar uma operação em marketplace com método, e para quem já vende e precisa organizar gestão, publicidade e crescimento.",
+    },
+    {
+      q: "Preciso já estar vendendo para entrar?",
+      a: "Não. O método começa pela análise de mercado e segue até a escala, então serve tanto para quem vai iniciar quanto para quem já tem vendas.",
+    },
+    {
+      q: "Quais canais o treinamento cobre?",
+      a: "O foco é Shopee e Mercado Livre.",
+    },
+    {
+      q: "Quais temas estão incluídos?",
+      a: "Análise de mercado, criação de anúncios, publicidade, estratégias de operação, escala, gestão, uso de inteligência artificial, dashboards, estruturação da operação, contratação e crescimento de equipe, estrutura física e galpão, e questões fiscais.",
+    },
+    {
+      q: "Por quanto tempo tenho acesso?",
+      a: "São 12 meses de acesso, com conteúdos atualizados mensalmente conforme surgem novidades.",
+    },
+    {
+      q: "Existe grupo de alunos?",
+      a: "Sim. O treinamento inclui um grupo de networking com os demais alunos.",
+    },
+    {
+      q: "Como funcionam os sorteios de visita?",
+      a: "São sorteios entre os alunos para conhecer pessoalmente a operação do Nicolas em São Paulo.",
+    },
+    {
+      q: "Como funciona o acesso e o pagamento?",
+      a: "[RESPOSTA OFICIAL — liberação do acesso e condições de pagamento]",
+    },
   ],
 };
 
 export const finalCta = {
-  headline: "Você pode continuar acumulando informação.",
-  sub: "Ou pode começar a organizar o que já sabe dentro de um método.",
-  text: "Nenhuma página decide por você. Mas se a sua operação hoje depende mais de tentativa do que de critério, o NCE existe exatamente para esse ponto.",
+  headline: "Você pode continuar juntando conteúdo sobre marketplace.",
+  sub: "Ou aprender como uma operação real é conduzida por dentro.",
+  text: "Nenhuma página decide por você. Mas se hoje a sua operação depende mais de tentativa do que de critério, é exatamente esse ponto que o NCE trata.",
 };
