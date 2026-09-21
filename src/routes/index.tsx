@@ -11,6 +11,7 @@ import {
   hook,
   objections,
   offer,
+  modules,
   pillars,
   problem,
   proof,
