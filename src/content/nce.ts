@@ -223,15 +223,15 @@ export const proof = {
   eyebrow: "Provas",
   headline: "Não é sobre o que prometemos. É sobre o que pode ser comprovado.",
   intro:
-    "Esta seção só será preenchida com material real enviado pelo Nicolas: prints, depoimentos, estudos de caso e resultados verificáveis. Nada aqui é ilustrativo.",
-  slots: [
-    { type: "Depoimento", label: "[DEPOIMENTO 01 — nome, contexto e o que mudou]" },
-    { type: "Print", label: "[PRINT DE RESULTADO 01 — com contexto explicado]" },
-    { type: "Estudo de caso", label: "[CASO 01 — ponto de partida, aplicação do método, situação atual]" },
-    { type: "Vídeo", label: "[VÍDEO DE ALUNO 01]" },
-    { type: "Feedback", label: "[FEEDBACK 01 — mensagem real de aluno]" },
-    { type: "Operação", label: "[FOTO OU VÍDEO DA OPERAÇÃO REAL EM SÃO PAULO]" },
-  ],
+    "Resultados e feedbacks reais de quem está aplicando o método.",
+  slides: [
+    { id: "p1", alt: "[PRINT DE PROVA 01]" },
+    { id: "p2", alt: "[PRINT DE PROVA 02]" },
+    { id: "p3", alt: "[PRINT DE PROVA 03]" },
+    { id: "p4", alt: "[PRINT DE PROVA 04]" },
+    { id: "p5", alt: "[PRINT DE PROVA 05]" },
+    { id: "p6", alt: "[PRINT DE PROVA 06]" },
+  ] as ModuleSlide[],
 };
 
 export const deliverables = {

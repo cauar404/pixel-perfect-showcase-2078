@@ -468,31 +468,26 @@ function Landing() {
       </Section>
 
       {/* PROVAS */}
-      <Section className="border-t border-border bg-surface/40">
-        <Reveal>
-          <Eyebrow>{proof.eyebrow}</Eyebrow>
-        </Reveal>
-        <Reveal delay={80}>
-          <h2 className="mt-8 max-w-3xl text-[clamp(2rem,4.2vw,3.25rem)] font-semibold leading-[1.08]">
-            {proof.headline}
-          </h2>
-        </Reveal>
-        <Reveal delay={140}>
-          <p className="mt-6 max-w-2xl text-muted-foreground">{proof.intro}</p>
-        </Reveal>
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {proof.slots.map((s, i) => (
-            <Reveal key={s.label} delay={i * 80}>
-              <div className="flex h-56 flex-col justify-between rounded-xl border border-dashed border-border bg-background/60 p-6 transition-colors duration-500 hover:border-brand/50">
-                <p className="eyebrow text-brand">{s.type}</p>
-                <p className="text-sm">
-                  <Placeholder>{s.label}</Placeholder>
-                </p>
-              </div>
-            </Reveal>
-          ))}
+      <section className="border-t border-border bg-surface/40 px-6 py-24 md:py-36">
+        <div className="mx-auto max-w-6xl">
+          <Reveal>
+            <Eyebrow>{proof.eyebrow}</Eyebrow>
+          </Reveal>
+          <Reveal delay={80}>
+            <h2 className="mt-8 max-w-3xl text-[clamp(2rem,4.2vw,3.25rem)] font-semibold leading-[1.08]">
+              {proof.headline}
+            </h2>
+          </Reveal>
+          <Reveal delay={140}>
+            <p className="mt-6 max-w-2xl text-muted-foreground">{proof.intro}</p>
+          </Reveal>
         </div>
-      </Section>
+        <Reveal delay={200}>
+          <div className="mx-auto mt-14 max-w-[110rem]">
+            <ModulesCarousel slides={proof.slides} itemLabel="Prova" />
+          </div>
+        </Reveal>
+      </section>
 
       {/* O QUE VOCÊ RECEBE */}
       <Section id="incluso" className="border-t border-border">
