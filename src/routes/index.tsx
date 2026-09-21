@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/Reveal";
+import { ModulesCarousel } from "@/components/ModulesCarousel";
 import {
   author,
   brand,
@@ -11,6 +12,7 @@ import {
   hook,
   objections,
   offer,
+  modules,
   pillars,
   problem,
   proof,
@@ -387,6 +389,29 @@ function Landing() {
           ))}
         </div>
       </Section>
+
+      {/* MÓDULOS */}
+      <section id="modulos" className="border-t border-border px-6 py-24 md:py-36">
+        <div className="mx-auto max-w-6xl">
+          <Reveal>
+            <Eyebrow>{modules.eyebrow}</Eyebrow>
+          </Reveal>
+          <Reveal delay={80}>
+            <h2 className="mt-8 max-w-3xl text-[clamp(2rem,4.2vw,3.25rem)] font-semibold leading-[1.05]">
+              {modules.headline}
+            </h2>
+          </Reveal>
+          <Reveal delay={140}>
+            <p className="mt-6 max-w-xl text-muted-foreground">{modules.intro}</p>
+          </Reveal>
+        </div>
+        <Reveal delay={200}>
+          <div className="mx-auto mt-14 max-w-[110rem]">
+            <div className="mx-auto mb-2 max-w-6xl" />
+            <ModulesCarousel slides={modules.slides} />
+          </div>
+        </Reveal>
+      </section>
 
       {/* NICOLAS */}
       <Section id="nicolas" className="border-t border-border">

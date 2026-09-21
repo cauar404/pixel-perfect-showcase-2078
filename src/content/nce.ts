@@ -177,6 +177,28 @@ export const shift = {
   ],
 };
 
+export type ModuleSlide = {
+  id: string;
+  /** URL ou import da arte do módulo. Enquanto vazio, exibe o espaço reservado. */
+  src?: string;
+  /** Texto alternativo (acessibilidade). Não é exibido quando há imagem. */
+  alt: string;
+};
+
+export const modules = {
+  eyebrow: "Por dentro do NCE",
+  headline: "Por dentro do NCE.",
+  intro: "Cada módulo do treinamento, na ordem em que a operação é construída.",
+  slides: [
+    { id: "m1", alt: "[ARTE DO MÓDULO 01]" },
+    { id: "m2", alt: "[ARTE DO MÓDULO 02]" },
+    { id: "m3", alt: "[ARTE DO MÓDULO 03]" },
+    { id: "m4", alt: "[ARTE DO MÓDULO 04]" },
+    { id: "m5", alt: "[ARTE DO MÓDULO 05]" },
+    { id: "m6", alt: "[ARTE DO MÓDULO 06]" },
+  ] as ModuleSlide[],
+};
+
 export const author = {
   eyebrow: "Quem está por trás",
   headline: "Nicolas aprendeu a operar perdendo dinheiro antes de ganhar.",
