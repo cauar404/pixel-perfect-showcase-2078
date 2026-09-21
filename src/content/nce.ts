@@ -311,11 +311,11 @@ export const offer = {
     "Sorteios para visitar a operação real em São Paulo",
   ],
   includesNote: "Estes são os itens atuais da oferta. Nada além disso é prometido.",
-  price: "R$ XXX",
-  priceNote: "[CONDIÇÕES OFICIAIS DE PAGAMENTO]",
-  guaranteeTitle: "[POLÍTICA OFICIAL DE GARANTIA]",
+  price: "R$ 179,90",
+  priceNote: "Cartão de crédito ou Pix. No cartão, em até 8x de R$ 26,57.",
+  guaranteeTitle: "7 dias de garantia",
   guaranteeText:
-    "O prazo e as condições serão preenchidos com a política oficial informada pelo Nicolas.",
+    "Você tem 7 dias para acessar o treinamento na Cakto e decidir se o método faz sentido para a sua operação. Se achar que não é para você, devolvemos o valor.",
   urgencyNote:
     "Nenhum prazo, lote ou vaga limitada é exibido aqui até que exista uma condição real informada pelo Nicolas.",
 };
@@ -358,7 +358,7 @@ export const faq = {
     },
     {
       q: "Como funciona o acesso e o pagamento?",
-      a: "[RESPOSTA OFICIAL — liberação do acesso e condições de pagamento]",
+      a: "O treinamento ficará hospedado na Cakto. O pagamento pode ser feito no cartão de crédito ou Pix. No cartão, o valor de R$ 179,90 pode ser parcelado em até 8x de R$ 26,57.",
     },
   ],
 };
