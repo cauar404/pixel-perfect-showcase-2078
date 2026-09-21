@@ -2,6 +2,8 @@
  * Conteúdo da landing page do NCE.
  * O que ainda depende de informação oficial do Nicolas está marcado com [ ].
  */
+import nicolasPhoto from "@/assets/nicolas.png.asset.json";
+
 
 export const brand = {
   name: "NCE",
@@ -214,7 +216,7 @@ export const author = {
     { label: "Faturamento atual", value: "~R$ 800 mil/mês" },
     { label: "Canais principais", value: "Shopee e ML" },
   ],
-  photo: "[FOTO OFICIAL DO NICOLAS]",
+  photo: nicolasPhoto.url,
 };
 
 export const proof = {
