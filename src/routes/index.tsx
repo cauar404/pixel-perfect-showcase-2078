@@ -113,9 +113,10 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 }
 
 function Placeholder({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="text-brand-soft/80 italic">{children}</span>
-  );
+  if (typeof children === "string" && !children.includes("[")) {
+    return <>{children}</>;
+  }
+  return <span className="text-brand-soft/80 italic">{children}</span>;
 }
 
 function Landing() {
