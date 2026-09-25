@@ -3,7 +3,12 @@
  * O que ainda depende de informação oficial do Nicolas está marcado com [ ].
  */
 import nicolasPhoto from "@/assets/nicolas.png.asset.json";
-
+import proof1 from "@/assets/provas/prova-social-1.webp.asset.json";
+import proof2 from "@/assets/provas/prova-social-2.webp.asset.json";
+import proof3 from "@/assets/provas/prova-social-3.webp.asset.json";
+import proof4 from "@/assets/provas/prova-social-4.webp.asset.json";
+import proof5 from "@/assets/provas/prova-social-5.webp.asset.json";
+import proof6 from "@/assets/provas/prova-social-6.webp.asset.json";
 
 export const brand = {
   name: "NCE",
@@ -225,12 +230,12 @@ export const proof = {
   intro:
     "Resultados e feedbacks reais de quem está aplicando o método.",
   slides: [
-    { id: "p1", alt: "[PRINT DE PROVA 01]" },
-    { id: "p2", alt: "[PRINT DE PROVA 02]" },
-    { id: "p3", alt: "[PRINT DE PROVA 03]" },
-    { id: "p4", alt: "[PRINT DE PROVA 04]" },
-    { id: "p5", alt: "[PRINT DE PROVA 05]" },
-    { id: "p6", alt: "[PRINT DE PROVA 06]" },
+    { id: "p1", src: proof1.url, alt: "Resultado de aluna do NCE" },
+    { id: "p2", src: proof2.url, alt: "Resultado de aluno do NCE" },
+    { id: "p3", src: proof3.url, alt: "Crescimento de aluna do NCE" },
+    { id: "p4", src: proof4.url, alt: "Relatório de vendas de aluno do NCE" },
+    { id: "p5", src: proof5.url, alt: "Resultado de vendas de aluna do NCE" },
+    { id: "p6", src: proof6.url, alt: "Faturamento e margem de aluno do NCE" },
   ] as ModuleSlide[],
 };
 

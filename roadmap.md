@@ -1,4 +1,4 @@
 # Roadmap
 
 - [x] Transformar a seção de provas em carrossel visual no estilo dos módulos.
-- [ ] Inserir os prints oficiais quando forem enviados pelo Nicolas. (Aguardando imagens.)
+- [x] Inserir os seis prints oficiais em 1320 × 2868 e adaptar sua exibição para celular.
