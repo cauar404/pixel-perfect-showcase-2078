@@ -10,9 +10,11 @@ import type { ModuleSlide } from "@/content/nce";
 export function ModulesCarousel({
   slides,
   itemLabel = "Módulo",
+  portrait = false,
 }: {
   slides: ModuleSlide[];
   itemLabel?: string;
+  portrait?: boolean;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -140,7 +142,11 @@ export function ModulesCarousel({
                 onClick={() => {
                   if (!drag.current.moved) scrollToIndex(i);
                 }}
-                className={`relative w-[72%] shrink-0 snap-center transition-all duration-700 ease-out sm:w-[48%] lg:w-[32%] ${
+                className={`relative shrink-0 snap-center transition-all duration-700 ease-out ${
+                  portrait
+                    ? "w-[78%] sm:w-[46%] lg:w-[28%]"
+                    : "w-[72%] sm:w-[48%] lg:w-[32%]"
+                } ${
                   isActive ? "scale-100 opacity-100" : "scale-[0.94] opacity-45"
                 } ${i === 0 ? "ml-[14%] sm:ml-[26%] lg:ml-[34%]" : ""} ${
                   i === slides.length - 1 ? "mr-[14%] sm:mr-[26%] lg:mr-[34%]" : ""
@@ -157,7 +163,9 @@ export function ModulesCarousel({
                       alt={slide.alt}
                       draggable={false}
                       loading="lazy"
-                      className="block h-auto w-full select-none object-contain"
+                      className={`block w-full select-none object-contain ${
+                        portrait ? "aspect-[1320/2868] h-auto" : "h-auto"
+                      }`}
                     />
                   ) : (
                     <div className="flex aspect-[3/4] items-center justify-center bg-surface/60 p-6 text-center">
