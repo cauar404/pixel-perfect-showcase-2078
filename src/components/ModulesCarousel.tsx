@@ -144,12 +144,12 @@ export function ModulesCarousel({
                 }}
                 className={`relative shrink-0 snap-center transition-all duration-700 ease-out ${
                   portrait
-                    ? "w-[78%] sm:w-[46%] lg:w-[28%]"
+                    ? "w-[68%] max-w-[290px] sm:w-[38%] lg:w-[22%]"
                     : "w-[72%] sm:w-[48%] lg:w-[32%]"
                 } ${
                   isActive ? "scale-100 opacity-100" : "scale-[0.94] opacity-45"
-                } ${i === 0 ? "ml-[14%] sm:ml-[26%] lg:ml-[34%]" : ""} ${
-                  i === slides.length - 1 ? "mr-[14%] sm:mr-[26%] lg:mr-[34%]" : ""
+                } ${i === 0 ? (portrait ? "ml-[16%] sm:ml-[31%] lg:ml-[39%]" : "ml-[14%] sm:ml-[26%] lg:ml-[34%]") : ""} ${
+                  i === slides.length - 1 ? (portrait ? "mr-[16%] sm:mr-[31%] lg:mr-[39%]" : "mr-[14%] sm:mr-[26%] lg:mr-[34%]") : ""
                 }`}
               >
                 <div
@@ -164,7 +164,7 @@ export function ModulesCarousel({
                       draggable={false}
                       loading="lazy"
                       className={`block w-full select-none object-contain ${
-                        portrait ? "aspect-[1320/2868] h-auto" : "h-auto"
+                        portrait ? "aspect-[884/1920] h-auto" : "h-auto"
                       }`}
                     />
                   ) : (
