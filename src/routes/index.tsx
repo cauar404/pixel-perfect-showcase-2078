@@ -54,22 +54,22 @@ function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-border bg-background/80 py-3 backdrop-blur-xl"
-          : "border-b border-transparent py-6"
-      }`}
-    >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
-        <a href="#top" aria-label="NCE" className="shrink-0">
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 md:pt-6">
+      <nav
+        className={`flex w-full max-w-fit items-center justify-between gap-4 rounded-full border px-2.5 py-2 backdrop-blur-xl transition-all duration-500 md:gap-10 ${
+          scrolled
+            ? "border-border bg-background/90 shadow-[0_12px_40px_-12px_hsl(0_0%_0%/0.65)]"
+            : "border-border/40 bg-background/70"
+        }`}
+      >
+        <a href="#top" aria-label="NCE" className="shrink-0 pl-1">
           <img
             src={logoUrl}
             alt="NCE"
             className="h-10 w-10 md:h-14 md:w-14 [filter:drop-shadow(0_0_14px_hsl(38_90%_60%/0.25))] transition-transform duration-300 hover:scale-105"
           />
         </a>
-        <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
+        <nav className="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground md:flex">
           <a className="transition-colors hover:text-foreground" href="#metodo">
             Método
           </a>
@@ -85,11 +85,11 @@ function Header() {
         </nav>
         <a
           href="#oferta"
-          className="rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-brand-foreground transition-transform duration-300 hover:scale-[1.03]"
+          className="shrink-0 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-brand-foreground shadow-[0_0_20px_hsl(38_90%_60%/0.2)] transition-transform duration-300 hover:scale-[1.03] active:scale-95"
         >
           {brand.ctaBuy}
         </a>
-      </div>
+      </nav>
     </header>
   );
 }
