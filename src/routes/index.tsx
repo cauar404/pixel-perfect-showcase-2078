@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logoUrl from "@/assets/logo.svg";
 import { Reveal } from "@/components/Reveal";
 import { ModulesCarousel } from "@/components/ModulesCarousel";
 import {
@@ -61,8 +62,12 @@ function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
-        <a href="#top" className="font-display text-lg font-semibold tracking-tight">
-          NCE<span className="text-brand">.</span>
+        <a href="#top" aria-label="NCE" className="shrink-0">
+          <img
+            src={logoUrl}
+            alt="NCE"
+            className="h-8 w-8 md:h-10 md:w-10 [filter:drop-shadow(0_0_14px_hsl(38_90%_60%/0.25))] transition-transform duration-300 hover:scale-105"
+          />
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a className="transition-colors hover:text-foreground" href="#metodo">
@@ -679,8 +684,11 @@ function Landing() {
 
       <footer className="border-t border-border px-6 py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-xs text-muted-foreground md:flex-row">
+        <div className="flex items-center justify-center gap-2.5 md:justify-start">
+          <img src={logoUrl} alt="NCE" className="h-6 w-6" />
           <p>NCE — Método de e-commerce por Nicolas.</p>
-          <p>© {new Date().getFullYear()} NCE. Todos os direitos reservados.</p>
+        </div>
+        <p>© {new Date().getFullYear()} NCE. Todos os direitos reservados.</p>
         </div>
       </footer>
     </main>
