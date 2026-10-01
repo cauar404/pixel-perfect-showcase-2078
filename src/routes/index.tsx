@@ -66,7 +66,7 @@ function Header() {
           <img
             src={logoUrl}
             alt="NCE"
-            className="h-8 w-8 md:h-10 md:w-10 [filter:drop-shadow(0_0_14px_hsl(38_90%_60%/0.25))] transition-transform duration-300 hover:scale-105"
+            className="h-10 w-10 md:h-14 md:w-14 [filter:drop-shadow(0_0_14px_hsl(38_90%_60%/0.25))] transition-transform duration-300 hover:scale-105"
           />
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
