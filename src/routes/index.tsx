@@ -1,11 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { ChevronDown, Instagram, Mail, MessageCircle, Phone } from "lucide-react";
 import logoUrl from "@/assets/logo.svg";
 import { Reveal } from "@/components/Reveal";
 import { ModulesCarousel } from "@/components/ModulesCarousel";
 import {
   author,
   brand,
+  contact,
   deliverables,
   faq,
   finalCta,
@@ -15,6 +17,7 @@ import {
   offer,
   modules,
   pillars,
+  policies,
   problem,
   proof,
   shift,
@@ -124,6 +127,34 @@ function Placeholder({ children }: { children: React.ReactNode }) {
     return <>{children}</>;
   }
   return <span className="text-brand-soft/80 italic">{children}</span>;
+}
+
+function ContactItem({
+  icon,
+  label,
+  href,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  href: string;
+}) {
+  const isPlaceholder = label.includes("[");
+  return isPlaceholder ? (
+    <span className="flex items-center gap-3 text-muted-foreground">
+      <span className="text-brand">{icon}</span>
+      <Placeholder>{label}</Placeholder>
+    </span>
+  ) : (
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noreferrer" : undefined}
+      className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-foreground"
+    >
+      <span className="text-brand">{icon}</span>
+      <span>{label}</span>
+    </a>
+  );
 }
 
 function Landing() {
@@ -626,30 +657,67 @@ function Landing() {
 
       {/* FAQ */}
       <Section id="faq" className="border-t border-border bg-surface/40">
-        <Reveal>
-          <Eyebrow>{faq.eyebrow}</Eyebrow>
-        </Reveal>
-        <Reveal delay={80}>
-          <h2 className="mt-8 text-[clamp(2rem,4.2vw,3.25rem)] font-semibold leading-[1.08]">
-            {faq.headline}
-          </h2>
-        </Reveal>
-        <div className="mt-12 divide-y divide-border border-y border-border">
-          {faq.items.map((item, i) => (
-            <Reveal key={item.q} delay={i * 50}>
-              <details className="group py-6">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-lg">
-                  {item.q}
-                  <span className="text-brand transition-transform duration-300 group-open:rotate-45">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-                  {item.a.includes("[") ? <Placeholder>{item.a}</Placeholder> : item.a}
-                </p>
-              </details>
+        <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+          <div>
+            <Reveal>
+              <Eyebrow>{faq.eyebrow}</Eyebrow>
             </Reveal>
-          ))}
+            <Reveal delay={80}>
+              <h2 className="mt-8 text-[clamp(1.9rem,3.4vw,2.75rem)] font-semibold leading-[1.08]">
+                {faq.headline}
+              </h2>
+            </Reveal>
+            <Reveal delay={140}>
+              <p className="mt-5 font-display text-lg text-brand-soft">{faq.sub}</p>
+            </Reveal>
+            <Reveal delay={180}>
+              <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">{faq.text}</p>
+            </Reveal>
+            <Reveal delay={220}>
+              <div className="mt-10 max-w-sm rounded-xl border border-border bg-background p-5">
+                <div className="flex items-center gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-brand/10">
+                    <MessageCircle className="h-6 w-6 text-brand" />
+                  </span>
+                  <div>
+                    <p className="font-display text-lg font-semibold">{faq.cta.label}</p>
+                    <p className="text-sm text-muted-foreground">
+                      <Placeholder>{faq.cta.sub}</Placeholder>
+                    </p>
+                  </div>
+                </div>
+                {faq.cta.url.includes("[") ? (
+                  <span className="mt-5 block cursor-not-allowed rounded-full bg-brand/60 px-6 py-3 text-center text-sm font-semibold text-brand-foreground opacity-60">
+                    Mandar mensagem
+                  </span>
+                ) : (
+                  <a
+                    href={faq.cta.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-5 block rounded-full bg-brand px-6 py-3 text-center text-sm font-semibold text-brand-foreground transition-transform duration-300 hover:scale-[1.02]"
+                  >
+                    Mandar mensagem
+                  </a>
+                )}
+              </div>
+            </Reveal>
+          </div>
+          <div className="divide-y divide-border border-y border-border">
+            {faq.items.map((item, i) => (
+              <Reveal key={item.q} delay={i * 50}>
+                <details className="group py-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base font-medium">
+                    {item.q}
+                    <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180" />
+                  </summary>
+                  <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                    {item.a.includes("[") ? <Placeholder>{item.a}</Placeholder> : item.a}
+                  </p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </Section>
 
@@ -686,13 +754,68 @@ function Landing() {
         </div>
       </section>
 
-      <footer className="border-t border-border px-6 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-xs text-muted-foreground md:flex-row">
-        <div className="flex items-center justify-center gap-2.5 md:justify-start">
-          <img src={logoUrl} alt="NCE" className="h-6 w-6" />
-          <p>NCE — Método de e-commerce por Nicolas.</p>
-        </div>
-        <p>© {new Date().getFullYear()} NCE. Todos os direitos reservados.</p>
+      <footer className="border-t border-border px-6 py-16 md:py-20">
+        <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-3">
+          <div>
+            <img
+              src={logoUrl}
+              alt="NCE"
+              className="h-12 w-12 [filter:drop-shadow(0_0_14px_hsl(38_90%_60%/0.25))]"
+            />
+            <p className="mt-6 text-sm">NCE — Método de e-commerce por Nicolas.</p>
+            <p className="mt-4 text-xs text-muted-foreground">
+              © {new Date().getFullYear()} NCE. Todos os direitos reservados.
+            </p>
+          </div>
+          <div>
+            <p className="font-display text-lg font-semibold">Contato</p>
+            <ul className="mt-5 space-y-4 text-sm">
+              <li>
+                <ContactItem
+                  icon={<Mail className="h-4 w-4" />}
+                  label={contact.email}
+                  href={contact.email.includes("[") ? "#" : `mailto:${contact.email}`}
+                />
+              </li>
+              <li>
+                <ContactItem
+                  icon={<Instagram className="h-4 w-4" />}
+                  label={contact.instagram}
+                  href={
+                    contact.instagram.includes("[")
+                      ? "#"
+                      : `https://instagram.com/${contact.instagram.replace("@", "").trim()}`
+                  }
+                />
+              </li>
+              <li>
+                <ContactItem
+                  icon={<Phone className="h-4 w-4" />}
+                  label={contact.phone}
+                  href={
+                    contact.phone.includes("[")
+                      ? "#"
+                      : `https://wa.me/${contact.phone.replace(/\D/g, "")}`
+                  }
+                />
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-display text-lg font-semibold">Políticas</p>
+            <ul className="mt-5 space-y-4 text-sm">
+              {policies.map((p) => (
+                <li key={p.href}>
+                  <Link
+                    to={p.href}
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {p.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </footer>
     </main>
