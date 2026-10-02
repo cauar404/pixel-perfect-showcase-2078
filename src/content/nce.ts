@@ -329,7 +329,14 @@ export const offer = {
 
 export const faq = {
   eyebrow: "FAQ",
-  headline: "Perguntas frequentes.",
+  headline: "Ficou com alguma dúvida?",
+  sub: "Relaxa, a gente responde agora.",
+  text: "Se a sua pergunta não estiver aqui, é só chamar no WhatsApp. Sem robô de atendimento, sem formulário longo — direto com a equipe.",
+  cta: {
+    label: "WhatsApp",
+    sub: "[NÚMERO OFICIAL DO WHATSAPP]",
+    url: "[LINK OFICIAL DO WHATSAPP]",
+  },
   items: [
     {
       q: "O que significa NCE?",
@@ -369,6 +376,17 @@ export const faq = {
     },
   ],
 };
+
+export const contact = {
+  email: "[E-MAIL OFICIAL DO NCE]",
+  instagram: "[@PERFIL DO INSTAGRAM]",
+  phone: "[TELEFONE COM WHATSAPP]",
+};
+
+export const policies = [
+  { label: "Políticas de Privacidade", href: "/privacidade" },
+  { label: "Termos de Uso", href: "/termos" },
+];
 
 export const finalCta = {
   headline: "Você pode continuar juntando conteúdo sobre marketplace.",
