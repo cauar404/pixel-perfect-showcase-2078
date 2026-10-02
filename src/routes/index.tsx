@@ -506,7 +506,11 @@ function Landing() {
         </Reveal>
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
           {deliverables.items.map((item, i) => (
-            <Reveal key={item.title} delay={i * 70}>
+            <Reveal
+              key={item.title}
+              delay={i * 70}
+              className={i === deliverables.items.length - 1 ? "md:col-span-2" : ""}
+            >
               <div className="h-full bg-background p-8 md:p-10">
                 <p className="font-display text-xl font-semibold">{item.title}</p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
