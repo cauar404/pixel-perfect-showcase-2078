@@ -11,14 +11,17 @@ export function ModulesCarousel({
   slides,
   itemLabel = "Módulo",
   portrait = false,
+  initialIndex = 0,
 }: {
   slides: ModuleSlide[];
   itemLabel?: string;
   portrait?: boolean;
+  initialIndex?: number;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState(0);
-  const [atStart, setAtStart] = useState(true);
+  const didInitial = useRef(false);
+  const [active, setActive] = useState(initialIndex);
+  const [atStart, setAtStart] = useState(initialIndex <= 0);
   const [atEnd, setAtEnd] = useState(false);
 
   const updateState = useCallback(() => {
