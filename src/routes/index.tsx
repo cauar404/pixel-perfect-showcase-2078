@@ -444,7 +444,7 @@ function Landing() {
         <Reveal delay={200}>
           <div className="mx-auto mt-14 max-w-[110rem]">
             <div className="mx-auto mb-2 max-w-6xl" />
-            <ModulesCarousel slides={modules.slides} />
+            <ModulesCarousel slides={modules.slides} initialIndex={3} />
           </div>
         </Reveal>
       </section>
@@ -520,7 +520,7 @@ function Landing() {
         </div>
         <Reveal delay={200}>
           <div className="mx-auto mt-14 max-w-[110rem]">
-            <ModulesCarousel slides={proof.slides} itemLabel="Prova" portrait />
+            <ModulesCarousel slides={proof.slides} itemLabel="Prova" portrait initialIndex={3} />
           </div>
         </Reveal>
       </section>

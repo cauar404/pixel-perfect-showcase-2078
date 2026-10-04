@@ -11,14 +11,17 @@ export function ModulesCarousel({
   slides,
   itemLabel = "Módulo",
   portrait = false,
+  initialIndex = 0,
 }: {
   slides: ModuleSlide[];
   itemLabel?: string;
   portrait?: boolean;
+  initialIndex?: number;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState(0);
-  const [atStart, setAtStart] = useState(true);
+  const didInitial = useRef(false);
+  const [active, setActive] = useState(initialIndex);
+  const [atStart, setAtStart] = useState(initialIndex <= 0);
   const [atEnd, setAtEnd] = useState(false);
 
   const updateState = useCallback(() => {
@@ -42,8 +45,19 @@ export function ModulesCarousel({
   }, []);
 
   useEffect(() => {
-    updateState();
     const el = trackRef.current;
+    // Pula para o slide inicial (sem animação) na primeira renderização
+    if (el && initialIndex > 0 && !didInitial.current) {
+      didInitial.current = true;
+      const node = el.children[initialIndex] as HTMLElement | undefined;
+      if (node) {
+        el.scrollTo({
+          left: node.offsetLeft - (el.clientWidth - node.offsetWidth) / 2,
+          behavior: "instant",
+        });
+      }
+    }
+    updateState();
     if (!el) return;
     el.addEventListener("scroll", updateState, { passive: true });
     window.addEventListener("resize", updateState);
