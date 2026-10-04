@@ -45,6 +45,18 @@ export function ModulesCarousel({
   }, []);
 
   useEffect(() => {
+    const el = trackRef.current;
+    // Pula para o slide inicial (sem animação) na primeira renderização
+    if (el && initialIndex > 0 && !didInitial.current) {
+      didInitial.current = true;
+      const node = el.children[initialIndex] as HTMLElement | undefined;
+      if (node) {
+        el.scrollTo({
+          left: node.offsetLeft - (el.clientWidth - node.offsetWidth) / 2,
+          behavior: "instant",
+        });
+      }
+    }
     updateState();
     const el = trackRef.current;
     if (!el) return;
