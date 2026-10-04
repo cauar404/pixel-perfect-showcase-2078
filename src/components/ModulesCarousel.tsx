@@ -58,7 +58,6 @@ export function ModulesCarousel({
       }
     }
     updateState();
-    const el = trackRef.current;
     if (!el) return;
     el.addEventListener("scroll", updateState, { passive: true });
     window.addEventListener("resize", updateState);
