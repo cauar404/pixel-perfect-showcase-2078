@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ChevronDown, Instagram, Mail, MessageCircle, Phone } from "lucide-react";
+import { ChevronDown, Instagram, Mail } from "lucide-react";
 import logoUrl from "@/assets/logo.svg";
 import { Reveal } from "@/components/Reveal";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { ModulesCarousel } from "@/components/ModulesCarousel";
 import {
   author,
@@ -677,7 +678,7 @@ function Landing() {
               <div className="mt-10 max-w-sm rounded-xl border border-border bg-background p-5">
                 <div className="flex items-center gap-4">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-brand/10">
-                    <MessageCircle className="h-6 w-6 text-brand" />
+                    <WhatsAppIcon className="h-6 w-6 text-brand" />
                   </span>
                   <div>
                     <p className="font-display text-lg font-semibold">{faq.cta.label}</p>
@@ -790,13 +791,9 @@ function Landing() {
               </li>
               <li>
                 <ContactItem
-                  icon={<Phone className="h-4 w-4" />}
+                  icon={<WhatsAppIcon className="h-4 w-4" />}
                   label={contact.phone}
-                  href={
-                    contact.phone.includes("[")
-                      ? "#"
-                      : `https://wa.me/${contact.phone.replace(/\D/g, "")}`
-                  }
+                  href={contact.whatsappUrl}
                 />
               </li>
             </ul>
