@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ChevronDown, Instagram, Mail } from "lucide-react";
+import { Check, ChevronDown, Instagram, Mail, ShieldCheck } from "lucide-react";
 import logoUrl from "@/assets/logo.svg";
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
