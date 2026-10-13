@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ChevronDown, Instagram, Mail } from "lucide-react";
+import { Check, ChevronDown, Instagram, Mail, ShieldCheck } from "lucide-react";
 import logoUrl from "@/assets/logo.svg";
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
@@ -599,58 +599,87 @@ function Landing() {
           ))}
         </div>
 
-        <Reveal delay={160}>
-          <div className="brand-glow mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="bg-background p-9 md:p-12">
+        <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+          <Reveal className="h-full">
+            <div className="flex h-full flex-col rounded-2xl border border-border bg-background p-8 md:p-10">
               <p className="eyebrow">Está incluído</p>
-              <ul className="mt-7 space-y-4">
+              <ul className="mt-8 space-y-5">
                 {offer.includes.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
-                    <span>{item}</span>
+                  <li key={item} className="flex items-start gap-4">
+                    <span className="mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand/30 bg-brand/10">
+                      <Check className="h-3.5 w-3.5 text-brand" strokeWidth={2.6} />
+                    </span>
+                    <span className="text-[1.02rem] leading-snug">{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-8 text-xs text-muted-foreground">{offer.includesNote}</p>
-            </div>
-            <div className="flex flex-col justify-between bg-surface p-9 md:p-12">
-              <div>
-                <p className="eyebrow">Investimento</p>
-                <p className="mt-6 font-display text-5xl font-semibold">
-                  <Placeholder>{offer.price}</Placeholder>
-                </p>
-                <p className="mt-3 text-sm">
-                  <Placeholder>{offer.priceNote}</Placeholder>
-                </p>
-              </div>
-              <a
-                href="#oferta"
-                className="mt-10 block rounded-full bg-brand px-8 py-4 text-center font-semibold text-brand-foreground transition-transform duration-300 hover:scale-[1.02]"
-              >
-                {brand.ctaBuy}
-              </a>
-            </div>
-          </div>
-        </Reveal>
-
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <Reveal>
-            <div className="h-full rounded-xl border border-dashed border-brand/40 p-7">
-              <p className="eyebrow text-brand">Garantia</p>
-              <p className="mt-3 font-display text-lg">
-                <Placeholder>{offer.guaranteeTitle}</Placeholder>
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {offer.guaranteeText}
+              <p className="mt-auto pt-10 text-xs text-muted-foreground">
+                {offer.includesNote}
               </p>
             </div>
           </Reveal>
-          <Reveal delay={80}>
-            <div className="h-full rounded-xl border border-border p-7">
-              <p className="eyebrow">Condições e prazos</p>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {offer.urgencyNote}
-              </p>
+
+          <Reveal delay={110} className="h-full">
+            <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand/25 bg-surface p-8 shadow-[0_40px_110px_-45px_hsl(38_90%_60%/0.45)] md:p-10">
+              <div className="pointer-events-none absolute -top-28 right-[-15%] h-[320px] w-[320px] rounded-full bg-brand opacity-[0.14] blur-[110px]" />
+
+              <div className="relative">
+                <p className="eyebrow text-brand">Investimento</p>
+                <p className="mt-6 font-display text-[clamp(3rem,6vw,4.25rem)] font-semibold leading-none">
+                  <Placeholder>{offer.price}</Placeholder>
+                </p>
+                <p className="mt-4 text-sm text-muted-foreground">
+                  <Placeholder>{offer.priceNote}</Placeholder>
+                </p>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <span className="rounded-full border border-brand/30 bg-brand/10 px-5 py-2.5 font-display text-lg font-semibold text-brand-soft">
+                    {offer.installment}
+                  </span>
+                  <span className="text-xs uppercase tracking-[0.16em] text-muted-foreground">
+                    {offer.installmentNote}
+                  </span>
+                </div>
+                <p className="mt-5 text-xs uppercase tracking-[0.16em] text-muted-foreground">
+                  {offer.platformNote}
+                </p>
+              </div>
+
+              <div className="relative mt-8 flex items-start gap-4 rounded-xl border border-border bg-background/60 p-5">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brand/25 bg-brand/10">
+                  <ShieldCheck className="h-5 w-5 text-brand" />
+                </span>
+                <div>
+                  <p className="font-display text-base font-semibold">
+                    <Placeholder>{offer.guaranteeTitle}</Placeholder>
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {offer.guaranteeText}
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative mt-auto pt-8">
+                <a
+                  href="#oferta"
+                  className="block rounded-full bg-brand px-8 py-4 text-center font-semibold text-brand-foreground transition-transform duration-300 hover:scale-[1.02]"
+                >
+                  {brand.ctaBuy}
+                </a>
+                <p className="mt-4 flex flex-wrap items-center justify-center gap-x-1.5 text-center text-sm text-muted-foreground">
+                  {offer.supportText}
+                  <a
+                    href={contact.whatsappUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 font-semibold text-brand transition-colors hover:text-brand-soft"
+                  >
+                    <WhatsAppIcon className="h-3.5 w-3.5" />
+                    {offer.supportLabel}
+                  </a>
+                  <span aria-hidden="true">·</span>
+                  <span>{contact.phone}</span>
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

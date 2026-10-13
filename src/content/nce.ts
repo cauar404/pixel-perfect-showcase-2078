@@ -325,12 +325,15 @@ export const offer = {
   ],
   includesNote: "Estes são os itens atuais da oferta. Nada além disso é prometido.",
   price: "R$ 179,90",
-  priceNote: "Cartão de crédito ou Pix. No cartão, em até 8x de R$ 26,57.",
+  priceNote: "Pix à vista ou cartão de crédito.",
+  installment: "8x de R$ 26,57",
+  installmentNote: "no cartão",
+  platformNote: "Acesso na Cakto · 12 meses de acesso",
   guaranteeTitle: "7 dias de garantia",
   guaranteeText:
-    "Você tem 7 dias para acessar o treinamento na Cakto e decidir se o método faz sentido para a sua operação. Se achar que não é para você, devolvemos o valor.",
-  urgencyNote:
-    "Nenhum prazo, lote ou vaga limitada é exibido aqui até que exista uma condição real informada pelo Nicolas.",
+    "Acesse o treinamento na Cakto, veja como o método funciona por dentro e, se não fizer sentido para a sua operação, é só pedir a devolução dentro de 7 dias.",
+  supportText: "Ficou com dúvida antes de entrar?",
+  supportLabel: "chame no WhatsApp",
 };
 
 export const faq = {
