@@ -197,9 +197,7 @@ export function ModulesCarousel({
                       alt={slide.alt}
                       draggable={false}
                       loading="lazy"
-                      className={`block w-full select-none object-contain ${
-                        portrait ? "aspect-[884/1920] h-auto" : "h-auto"
-                      }`}
+                      className={`block w-full select-none object-contain ${size.img}`}
                     />
                   ) : (
                     <div className="flex aspect-[3/4] items-center justify-center bg-surface/60 p-6 text-center">
