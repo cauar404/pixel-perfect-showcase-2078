@@ -9,6 +9,12 @@ import proofSara from "@/assets/provas/prova-sara.webp.asset.json";
 import proofDaiane from "@/assets/provas/prova-daiane.webp.asset.json";
 import proofAnanda from "@/assets/provas/prova-ananda.webp.asset.json";
 import proofGuilherme from "@/assets/provas/prova-guilherme.webp.asset.json";
+import modulo1 from "@/assets/modulos/modulo-1.webp.asset.json";
+import modulo2 from "@/assets/modulos/modulo-2.webp.asset.json";
+import modulo3 from "@/assets/modulos/modulo-3.webp.asset.json";
+import modulo4 from "@/assets/modulos/modulo-4.webp.asset.json";
+import modulo5 from "@/assets/modulos/modulo-5.webp.asset.json";
+import modulo6 from "@/assets/modulos/modulo-6.webp.asset.json";
 
 export const brand = {
   name: "NCE",
@@ -197,12 +203,12 @@ export const modules = {
   headline: "Por dentro do NCE.",
   intro: "Cada módulo do treinamento, na ordem em que a operação é construída.",
   slides: [
-    { id: "m1", alt: "[ARTE DO MÓDULO 01]" },
-    { id: "m2", alt: "[ARTE DO MÓDULO 02]" },
-    { id: "m3", alt: "[ARTE DO MÓDULO 03]" },
-    { id: "m4", alt: "[ARTE DO MÓDULO 04]" },
-    { id: "m5", alt: "[ARTE DO MÓDULO 05]" },
-    { id: "m6", alt: "[ARTE DO MÓDULO 06]" },
+    { id: "m1", src: modulo1.url, alt: "Módulo Comece por Aqui" },
+    { id: "m2", src: modulo2.url, alt: "Módulo Mercado Livre" },
+    { id: "m3", src: modulo3.url, alt: "Módulo Shopee" },
+    { id: "m4", src: modulo4.url, alt: "Módulo TikTok Shop" },
+    { id: "m5", src: modulo5.url, alt: "Módulo Gestão Financeira" },
+    { id: "m6", src: modulo6.url, alt: "Módulo Materiais e Ferramentas" },
   ] as ModuleSlide[],
 };
 
