@@ -340,8 +340,8 @@ export const faq = {
   text: "Se a sua pergunta não estiver aqui, é só chamar no WhatsApp. Sem robô de atendimento, sem formulário longo — direto com a equipe.",
   cta: {
     label: "WhatsApp",
-    sub: "[NÚMERO OFICIAL DO WHATSAPP]",
-    url: "[LINK OFICIAL DO WHATSAPP]",
+    sub: "11 93962-8392 • Suporte oficial",
+    url: "https://wa.me/5511939628392",
   },
   items: [
     {
@@ -384,9 +384,10 @@ export const faq = {
 };
 
 export const contact = {
-  email: "[E-MAIL OFICIAL DO NCE]",
-  instagram: "[@PERFIL DO INSTAGRAM]",
-  phone: "[TELEFONE COM WHATSAPP]",
+  email: "metodonce@gmail.com",
+  instagram: "@Nicolas.ecommerce",
+  phone: "11 93962-8392",
+  whatsappUrl: "https://wa.me/5511939628392",
 };
 
 export const policies = [
