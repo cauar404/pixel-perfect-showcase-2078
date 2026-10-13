@@ -7,17 +7,43 @@ import type { ModuleSlide } from "@/content/nce";
  * Para publicar as artes definitivas, basta preencher `src` em `modules.slides`
  * (src/content/nce.ts) com a URL/import da imagem.
  */
+/**
+ * Medidas por tipo de arte: largura do card, respiro nas pontas e proporção
+ * reservada antes da imagem carregar (evita pulo no layout).
+ */
+const VARIANTS = {
+  default: {
+    item: "w-[72%] sm:w-[48%] lg:w-[32%]",
+    first: "ml-[14%] sm:ml-[26%] lg:ml-[34%]",
+    last: "mr-[14%] sm:mr-[26%] lg:mr-[34%]",
+    img: "h-auto",
+  },
+  module: {
+    item: "w-[74%] max-w-[340px] sm:w-[44%] lg:w-[26%]",
+    first: "ml-[13%] sm:ml-[28%] lg:ml-[37%]",
+    last: "mr-[13%] sm:mr-[28%] lg:mr-[37%]",
+    img: "aspect-[2/3] h-auto",
+  },
+  proof: {
+    item: "w-[68%] max-w-[290px] sm:w-[38%] lg:w-[22%]",
+    first: "ml-[16%] sm:ml-[31%] lg:ml-[39%]",
+    last: "mr-[16%] sm:mr-[31%] lg:mr-[39%]",
+    img: "aspect-[884/1920] h-auto",
+  },
+} as const;
+
 export function ModulesCarousel({
   slides,
   itemLabel = "Módulo",
-  portrait = false,
+  variant = "default",
   initialIndex = 0,
 }: {
   slides: ModuleSlide[];
   itemLabel?: string;
-  portrait?: boolean;
+  variant?: keyof typeof VARIANTS;
   initialIndex?: number;
 }) {
+  const size = VARIANTS[variant];
   const trackRef = useRef<HTMLDivElement>(null);
   const didInitial = useRef(false);
   const [active, setActive] = useState(initialIndex);
@@ -156,15 +182,9 @@ export function ModulesCarousel({
                 onClick={() => {
                   if (!drag.current.moved) scrollToIndex(i);
                 }}
-                className={`relative shrink-0 snap-center transition-all duration-700 ease-out ${
-                  portrait
-                    ? "w-[68%] max-w-[290px] sm:w-[38%] lg:w-[22%]"
-                    : "w-[72%] sm:w-[48%] lg:w-[32%]"
-                } ${
+                className={`relative shrink-0 snap-center transition-all duration-700 ease-out ${size.item} ${
                   isActive ? "scale-100 opacity-100" : "scale-[0.94] opacity-45"
-                } ${i === 0 ? (portrait ? "ml-[16%] sm:ml-[31%] lg:ml-[39%]" : "ml-[14%] sm:ml-[26%] lg:ml-[34%]") : ""} ${
-                  i === slides.length - 1 ? (portrait ? "mr-[16%] sm:mr-[31%] lg:mr-[39%]" : "mr-[14%] sm:mr-[26%] lg:mr-[34%]") : ""
-                }`}
+                } ${i === 0 ? size.first : ""} ${i === slides.length - 1 ? size.last : ""}`}
               >
                 <div
                   className={`overflow-hidden rounded-2xl border transition-all duration-700 ${
