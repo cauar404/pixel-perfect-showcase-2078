@@ -386,6 +386,7 @@ export const faq = {
 export const contact = {
   email: "metodonce@gmail.com",
   instagram: "@Nicolas.ecommerce",
+  instagramUrl: "https://www.instagram.com/nicolas.ecommerce",
   phone: "11 93962-8392",
   whatsappUrl: "https://wa.me/5511939628392",
 };

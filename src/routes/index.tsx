@@ -782,11 +782,7 @@ function Landing() {
                 <ContactItem
                   icon={<Instagram className="h-4 w-4" />}
                   label={contact.instagram}
-                  href={
-                    contact.instagram.includes("[")
-                      ? "#"
-                      : `https://instagram.com/${contact.instagram.replace("@", "").trim()}`
-                  }
+                  href={contact.instagramUrl}
                 />
               </li>
               <li>
