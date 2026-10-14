@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep landing-page copy in `src/content/nce.ts` and the purchase-decision composition in `src/components/DecisionSection.tsx` so content and presentation stay independently maintainable.
+- Use the shared `Reveal` component for one-time viewport entrances and respect reduced-motion preferences so motion remains accessible and consistent.
