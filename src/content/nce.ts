@@ -318,9 +318,9 @@ export const offer = {
   includesNote: "Estes são os itens atuais da oferta. Nada além disso é prometido.",
   price: "R$ 179,90",
   priceNote: "Pix à vista ou cartão de crédito.",
-  installment: "8x de R$ 26,57",
+  installment: "8x de R$ 26,16",
   installmentNote: "no cartão",
-  platformNote: "Acesso na Cakto · 12 meses de acesso",
+  platformNote: "Acesso na Kiwify · 12 meses de acesso",
   guaranteeTitle: "7 dias de garantia",
   guaranteeText:
     "Conheça o método por dentro. Se não fizer sentido, peça a devolução dentro de 7 dias.",
