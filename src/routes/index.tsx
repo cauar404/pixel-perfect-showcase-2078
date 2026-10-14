@@ -603,9 +603,12 @@ function Landing() {
           <Reveal className="h-full">
             <div className="flex h-full flex-col rounded-2xl border border-border bg-background p-8 md:p-10">
               <p className="eyebrow">Está incluído</p>
-              <ul className="mt-8 space-y-5">
+              <ul className="mt-6 flex flex-1 flex-col justify-between divide-y divide-border">
                 {offer.includes.map((item) => (
-                  <li key={item} className="flex items-start gap-4">
+                  <li
+                    key={item}
+                    className="flex items-start gap-4 py-4 first:pt-0 last:pb-0"
+                  >
                     <span className="mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand/30 bg-brand/10">
                       <Check className="h-3.5 w-3.5 text-brand" strokeWidth={2.6} />
                     </span>
@@ -613,7 +616,7 @@ function Landing() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-auto pt-10 text-xs text-muted-foreground">
+              <p className="mt-8 border-t border-border pt-6 text-sm text-muted-foreground">
                 {offer.includesNote}
               </p>
             </div>
@@ -622,6 +625,7 @@ function Landing() {
           <Reveal delay={110} className="h-full">
             <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand/25 bg-surface p-8 shadow-[0_40px_110px_-45px_hsl(38_90%_60%/0.45)] md:p-10">
               <div className="pointer-events-none absolute -top-28 right-[-15%] h-[320px] w-[320px] rounded-full bg-brand opacity-[0.14] blur-[110px]" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/70 to-transparent" />
 
               <div className="relative">
                 <p className="eyebrow text-brand">Investimento</p>
@@ -631,15 +635,17 @@ function Landing() {
                 <p className="mt-4 text-sm text-muted-foreground">
                   <Placeholder>{offer.priceNote}</Placeholder>
                 </p>
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <span className="rounded-full border border-brand/30 bg-brand/10 px-5 py-2.5 font-display text-lg font-semibold text-brand-soft">
-                    {offer.installment}
-                  </span>
-                  <span className="text-xs uppercase tracking-[0.16em] text-muted-foreground">
-                    {offer.installmentNote}
+                <div className="mt-7">
+                  <span className="inline-flex items-baseline gap-2.5 rounded-full border border-brand/30 bg-brand/10 px-5 py-2.5">
+                    <span className="font-display text-lg font-semibold text-brand-soft">
+                      {offer.installment}
+                    </span>
+                    <span className="text-[0.68rem] uppercase tracking-[0.16em] text-muted-foreground">
+                      {offer.installmentNote}
+                    </span>
                   </span>
                 </div>
-                <p className="mt-5 text-xs uppercase tracking-[0.16em] text-muted-foreground">
+                <p className="mt-5 text-sm uppercase tracking-[0.14em] text-muted-foreground/90">
                   {offer.platformNote}
                 </p>
               </div>
