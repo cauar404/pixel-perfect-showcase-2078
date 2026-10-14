@@ -39,9 +39,8 @@ export const hook = {
   eyebrow: "Primeiro, um ajuste de perspectiva",
   headline: "Vender em marketplace e operar um negócio são duas coisas diferentes.",
   body: [
-    "Cadastrar um produto na Shopee ou no Mercado Livre é simples. Milhares de pessoas fazem isso todos os dias e conseguem a primeira venda em poucas semanas.",
-    "O que é difícil é o que vem depois: escolher o produto certo pelo motivo certo, precificar sem corroer a margem, sustentar o anúncio quando o CPA sobe, decidir quanto comprar, onde guardar, quando contratar e como manter a parte fiscal em ordem enquanto o volume cresce.",
-    "É nessa camada — a que não aparece no painel do marketplace — que a maioria das operações trava. E é exatamente aí que o NCE começa.",
+    "A primeira venda é só o começo. O desafio é escolher bem o produto, proteger a margem e manter a operação funcionando quando o volume cresce.",
+    "O NCE começa onde o painel do marketplace termina: nas decisões que sustentam o negócio.",
   ],
 };
 
@@ -53,19 +52,19 @@ export const problem = {
   items: [
     {
       title: "O consumo vira rotina",
-      text: "Mais um vídeo sobre Shopee, mais um conteúdo sobre Mercado Livre, mais um print de faturamento. A sensação de evolução é real, mas a operação continua no mesmo lugar.",
+      text: "Mais vídeos, mais estratégias. A informação se acumula, mas a operação não avança.",
     },
     {
       title: "A direção muda toda semana",
-      text: "Uma estratégia nova aparece, você troca de rumo, abandona o anúncio que ainda estava maturando — e recomeça sem nunca fechar um ciclo.",
+      text: "Uma nova estratégia muda o rumo antes de a anterior completar um ciclo.",
     },
     {
       title: "Tudo parece prioridade",
-      text: "Produto, anúncio, ads, preço, estoque, atendimento, nota fiscal. Sem critério para escolher, a energia se espalha e nada avança de verdade.",
+      text: "Produto, anúncios, estoque e fiscal disputam atenção. Sem critério, tudo vira urgência.",
     },
     {
       title: "Decisão no achismo",
-      text: "Sem processo, cada decisão é uma aposta isolada. Quando dá certo, é difícil repetir. Quando dá errado, é difícil entender por quê.",
+      text: "Sem processo, é difícil repetir o acerto — ou entender o erro.",
     },
   ],
   close:
@@ -76,9 +75,7 @@ export const turn = {
   eyebrow: "A virada",
   headline: "Saber vender é o começo. Saber operar é o que sustenta.",
   body: [
-    "Vender é conseguir um pedido. Operar é entender por que aquele pedido aconteceu, quanto ele realmente deixou e o que precisa existir para que ele se repita em escala.",
-    "Quem opera com método consegue olhar para uma queda de vendas e saber onde procurar: no anúncio, no preço, na verba de mídia, na concorrência ou na ruptura de estoque.",
-    "Foi essa diferença que fez o Nicolas sair de tentativas frustradas para uma operação que hoje gira em outro patamar. Não foi um atalho — foi sequência.",
+    "Entender por que um pedido aconteceu, quanto ele deixou e o que permite repeti-lo. É essa leitura que transforma venda em operação.",
   ],
   steps: [
     { n: "01", title: "Análise", text: "Ler o mercado e escolher produto com critério, não por palpite." },
@@ -92,9 +89,8 @@ export const what = {
   eyebrow: "O que é o NCE",
   headline: "O NCE é a operação do Nicolas, aberta e transformada em método.",
   body: [
-    "NCE significa Nicolas Ecommerce. É um treinamento que ensina, passo a passo, como estruturar, operar e escalar uma operação dentro dos marketplaces — com foco em Shopee e Mercado Livre.",
-    "Ele não para na parte que todo mundo mostra. Além de análise de mercado, criação de anúncios e publicidade, o NCE entra no que aparece quando a operação cresce: estrutura de galpão, momento certo de contratar, quando procurar um espaço maior, questões fiscais, uso de inteligência artificial e dashboards para acompanhar os números.",
-    "Por isso o aluno não está comprando um pacote de aulas sobre marketplace. Está tendo acesso às decisões que o Nicolas toma dentro da própria operação, organizadas em uma sequência que pode ser aplicada.",
+    "Nicolas Ecommerce é um treinamento passo a passo para estruturar, operar e escalar nos marketplaces, com foco em Shopee e Mercado Livre.",
+    "Da escolha do produto à gestão de estoque, equipe, galpão e fiscal. As decisões da operação do Nicolas, organizadas em uma sequência aplicável.",
   ],
   meaning: {
     label: "O que significa NCE",
@@ -103,7 +99,7 @@ export const what = {
   why: {
     label: "Por que o método existe",
     value:
-      "Porque o Nicolas perdeu tempo e dinheiro tentando descobrir tudo sozinho, e só avançou quando passou a aprender com quem já operava. O NCE é essa redução de margem de erro organizada em um caminho.",
+      "Para organizar o aprendizado de quem quer operar sem repetir os erros de quem começou sozinho.",
   },
   cards: [
     {
@@ -216,11 +212,9 @@ export const author = {
   eyebrow: "Quem está por trás",
   headline: "Nicolas aprendeu a operar perdendo dinheiro antes de ganhar.",
   paragraphs: [
-    "Em 2023, logo depois de sair da escola, ele abriu o primeiro negócio: uma loja própria de dropshipping. Foram cerca de seis meses sem o retorno esperado, até encerrar o projeto.",
-    "Meses depois, montou com o irmão uma loja de moda masculina focada em camisetas básicas. Investiram mais de R$ 30 mil sem conhecimento e sem experiência — e o resultado foi estoque parado e publicidade sem retorno.",
-    "Em 2024 ele entrou nos marketplaces com outra postura: em vez de tentar descobrir tudo sozinho, foi buscar cursos e mentorias ao vivo com quem já operava. Segundo ele, foi isso que reduziu drasticamente sua margem de erro.",
-    "O primeiro mês fechou em torno de R$ 5 mil. No sexto mês, a operação já estava perto de R$ 100 mil mensais. Hoje, de acordo com os dados do próprio Nicolas, ela fatura cerca de R$ 800 mil por mês, com a meta de chegar a R$ 1 milhão.",
-    "Esses números são a trajetória dele, não uma previsão do seu resultado. O que o NCE entrega é o raciocínio e os processos que ele usa nessa operação.",
+    "Em 2023, depois de sair da escola, Nicolas tentou dropshipping por cerca de seis meses, sem retorno. Depois, investiu mais de R$ 30 mil em uma loja de camisetas com o irmão. Ficaram com estoque parado e publicidade sem resultado.",
+    "Em 2024, entrou nos marketplaces e buscou cursos e mentorias com quem já operava. O primeiro mês fechou em cerca de R$ 5 mil; no sexto, a operação se aproximava de R$ 100 mil mensais.",
+    "Hoje, segundo Nicolas, a operação fatura cerca de R$ 800 mil por mês, com meta de R$ 1 milhão. O NCE reúne o raciocínio e os processos dessa trajetória — não uma promessa de repetir os mesmos números.",
   ],
   facts: [
     { label: "Início nos marketplaces", value: "2024" },
@@ -232,7 +226,7 @@ export const author = {
 
 export const proof = {
   eyebrow: "Provas",
-  headline: "Não é sobre o que prometemos. É sobre o que pode ser comprovado.",
+  headline: "O método, na prática.",
   intro:
     "Resultados e feedbacks reais de quem está aplicando o método.",
   slides: [
@@ -247,7 +241,7 @@ export const proof = {
 
 export const deliverables = {
   eyebrow: "O que você recebe",
-  headline: "O que está incluído nos 12 meses — e por que cada parte existe.",
+  headline: "Um método completo. Um ano para aplicar.",
   items: [
     {
       title: "Método NCE completo",
@@ -279,7 +273,7 @@ export const deliverables = {
 
 export const objections = {
   eyebrow: "Antes de decidir",
-  headline: "As dúvidas que aparecem antes de qualquer decisão honesta.",
+  headline: "O NCE faz sentido para você?",
   items: [
     {
       q: "E se eu ainda estiver começando?",
@@ -312,9 +306,7 @@ export const offer = {
   eyebrow: "A decisão",
   headline: "Agora é sobre aplicar isso dentro da sua operação.",
   lead: [
-    "Você viu onde a maioria trava: informação demais, critério de menos.",
-    "Viu as frentes que o método cobre — da análise de mercado à escala, estrutura e fiscal.",
-    "E viu de onde ele vem: uma operação real em Shopee e Mercado Livre.",
+    "As decisões de uma operação real, em uma sequência para você estudar, aplicar e revisitar conforme o negócio cresce.",
   ],
   includes: [
     "Método NCE completo, do estudo de mercado à escala",
@@ -331,7 +323,7 @@ export const offer = {
   platformNote: "Acesso na Cakto · 12 meses de acesso",
   guaranteeTitle: "7 dias de garantia",
   guaranteeText:
-    "Acesse o treinamento na Cakto, veja como o método funciona por dentro e, se não fizer sentido para a sua operação, é só pedir a devolução dentro de 7 dias.",
+    "Conheça o método por dentro. Se não fizer sentido, peça a devolução dentro de 7 dias.",
   supportText: "Ficou com dúvida antes de entrar?",
   supportLabel: "chame no WhatsApp",
 };
@@ -340,7 +332,7 @@ export const faq = {
   eyebrow: "FAQ",
   headline: "Ficou com alguma dúvida?",
   sub: "Relaxa, a gente responde agora.",
-  text: "Se a sua pergunta não estiver aqui, é só chamar no WhatsApp. Sem robô de atendimento, sem formulário longo — direto com a equipe.",
+  text: "Se precisar conversar, nosso suporte está no WhatsApp.",
   cta: {
     label: "WhatsApp",
     sub: "11 93962-8392 • Suporte oficial",
@@ -400,7 +392,7 @@ export const policies = [
 ];
 
 export const finalCta = {
-  headline: "Você pode continuar juntando conteúdo sobre marketplace.",
-  sub: "Ou aprender como uma operação real é conduzida por dentro.",
-  text: "Nenhuma página decide por você. Mas se hoje a sua operação depende mais de tentativa do que de critério, é exatamente esse ponto que o NCE trata.",
+  headline: "Menos tentativa.",
+  sub: "Mais direção para operar.",
+  text: "Conheça os processos e as decisões de uma operação real — e aplique o método no seu negócio.",
 };

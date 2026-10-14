@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Check, ChevronDown, Instagram, Mail, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, BarChart3, ChevronDown, Compass, Instagram, Layers3, Mail, PackageCheck, RefreshCw, Users, Warehouse } from "lucide-react";
+import { DecisionSection } from "@/components/DecisionSection";
 import logoUrl from "@/assets/logo.svg";
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
@@ -15,7 +16,6 @@ import {
   hero,
   hook,
   objections,
-  offer,
   modules,
   pillars,
   policies,
@@ -108,7 +108,7 @@ function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={`px-6 py-24 md:py-36 ${className}`}>
+    <section id={id} className={`editorial-section px-6 py-20 md:py-28 ${className}`}>
       <div className="mx-auto max-w-6xl">{children}</div>
     </section>
   );
@@ -239,10 +239,10 @@ function Landing() {
               {hook.headline}
             </h2>
           </Reveal>
-          <div className="space-y-6">
+          <div className="space-y-5">
             {hook.body.map((p, i) => (
               <Reveal key={p} delay={120 + i * 80}>
-                <p className="text-lg leading-relaxed text-muted-foreground">{p}</p>
+                <p className="text-base leading-relaxed text-muted-foreground">{p}</p>
               </Reveal>
             ))}
           </div>
@@ -262,11 +262,12 @@ function Landing() {
         <Reveal delay={140}>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{problem.intro}</p>
         </Reveal>
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {problem.items.map((item, i) => (
             <Reveal key={item.title} delay={i * 90}>
-              <div className="group h-full bg-background p-8 transition-colors duration-500 hover:bg-surface md:p-10">
-                <p className="font-display text-xl font-semibold">{item.title}</p>
+              <div className="editorial-item group h-full border-t border-border py-6 md:pr-8">
+                <div className="mb-5 flex items-center justify-between"><span className="font-display text-xs text-brand">0{i + 1}</span><ArrowUpRight className="h-4 w-4 text-muted-foreground" /></div>
+                <p className="font-display text-lg font-semibold">{item.title}</p>
                 <p className="mt-4 leading-relaxed text-muted-foreground">{item.text}</p>
               </div>
             </Reveal>
@@ -292,14 +293,14 @@ function Landing() {
         <div className="mt-8 max-w-2xl space-y-5">
           {turn.body.map((p, i) => (
             <Reveal key={p} delay={120 + i * 70}>
-              <p className="text-lg leading-relaxed text-muted-foreground">{p}</p>
+              <p className="text-base leading-relaxed text-muted-foreground">{p}</p>
             </Reveal>
           ))}
         </div>
-        <div className="mt-16 grid gap-6 md:grid-cols-4">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {turn.steps.map((s, i) => (
             <Reveal key={s.n} delay={i * 100}>
-              <div className="h-full rounded-xl border border-border p-7 transition-transform duration-500 hover:-translate-y-1">
+              <div className="editorial-item h-full border-t border-border pt-6">
                 <p className="font-display text-sm text-brand">{s.n}</p>
                 <p className="mt-6 font-display text-lg font-semibold">{s.title}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
@@ -320,17 +321,17 @@ function Landing() {
           </h2>
         </Reveal>
         <div className="mt-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-6">
+          <div className="space-y-5">
             {what.body.map((p, i) => (
               <Reveal key={p} delay={100 + i * 70}>
-                <p className="text-lg leading-relaxed text-muted-foreground">{p}</p>
+                <p className="text-base leading-relaxed text-muted-foreground">{p}</p>
               </Reveal>
             ))}
           </div>
           <div className="space-y-4">
             {[what.meaning, what.why].map((item, i) => (
               <Reveal key={item.label} delay={120 + i * 90}>
-                <div className="rounded-xl border border-dashed border-brand/40 bg-background/50 p-6">
+                <div className="border-l border-brand/40 py-2 pl-6">
                   <p className="eyebrow">{item.label}</p>
                   <p className="mt-3">
                     <Placeholder>{item.value}</Placeholder>
@@ -343,7 +344,8 @@ function Landing() {
         <div className="mt-16 grid gap-6 md:grid-cols-3">
           {what.cards.map((c, i) => (
             <Reveal key={c.title} delay={i * 90}>
-              <div className="h-full rounded-xl border border-border bg-background p-8">
+              <div className="editorial-item h-full border-t border-border pt-6">
+                {(() => { const Icon = [Compass, Layers3, BarChart3][i]; return Icon ? <Icon className="mb-5 h-6 w-6 text-brand" strokeWidth={1.4} /> : null; })()}
                 <p className="font-display text-lg font-semibold">{c.title}</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
               </div>
@@ -365,32 +367,20 @@ function Landing() {
         <Reveal delay={140}>
           <p className="mt-6 max-w-2xl text-muted-foreground">{pillars.intro}</p>
         </Reveal>
-        <div className="mt-16 divide-y divide-border border-y border-border">
+        <div className="mt-12 divide-y divide-border border-y border-border">
           {pillars.items.map((p, i) => (
-            <Reveal key={p.n} delay={i * 70}>
-              <div className="group grid gap-6 py-10 transition-colors duration-500 md:grid-cols-[100px_1fr_1fr] md:gap-10">
-                <p className="font-display text-3xl font-semibold text-brand/70 transition-colors group-hover:text-brand">
-                  {p.n}
-                </p>
-                <div>
-                  <h3 className="font-display text-2xl font-semibold">
-                    <Placeholder>{p.title}</Placeholder>
-                  </h3>
-                  <p className="mt-3 text-sm text-muted-foreground">
-                    <Placeholder>{p.what}</Placeholder>
-                  </p>
+            <Reveal key={p.n} delay={i * 60}>
+              <details className="group py-6 md:py-7" open={i === 0}>
+                <summary className="grid cursor-pointer list-none grid-cols-[40px_1fr_20px] items-center gap-4 md:grid-cols-[70px_1fr_24px]">
+                  <span className="font-display text-sm text-brand">{p.n}</span>
+                  <h3 className="text-xl font-medium md:text-2xl">{p.title}</h3>
+                  <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-300 group-open:rotate-180" />
+                </summary>
+                <div className="detail-content mt-5 space-y-4 pl-14 md:grid md:grid-cols-2 md:gap-10 md:space-y-0 md:pl-[86px]">
+                  <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">{p.what}</p>
+                  <div className="space-y-3 text-sm leading-relaxed"><p className="text-muted-foreground">{p.why}</p><p className="text-foreground">{p.result}</p></div>
                 </div>
-                <div className="space-y-3 text-sm text-muted-foreground">
-                  <p>
-                    <span className="eyebrow block">Por que importa</span>
-                    <Placeholder>{p.why}</Placeholder>
-                  </p>
-                  <p>
-                    <span className="eyebrow block">O que muda</span>
-                    <Placeholder>{p.result}</Placeholder>
-                  </p>
-                </div>
-              </div>
+              </details>
             </Reveal>
           ))}
         </div>
@@ -409,16 +399,16 @@ function Landing() {
         <Reveal delay={140}>
           <p className="mt-6 max-w-2xl text-muted-foreground">{shift.intro}</p>
         </Reveal>
-        <div className="mt-14 space-y-4">
+        <div className="mt-12 border-t border-border">
           {shift.pairs.map((pair, i) => (
             <Reveal key={pair.before} delay={i * 90}>
-              <div className="grid items-stretch gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-2">
-                <div className="bg-background p-7">
-                  <p className="eyebrow">Sem método</p>
+              <div className="grid items-stretch border-b border-border md:grid-cols-2">
+                <div className="py-6 md:pr-8">
+                  {i === 0 && <p className="eyebrow mb-4">Sem método</p>}
                   <p className="mt-3 text-muted-foreground">“{pair.before}”</p>
                 </div>
-                <div className="bg-background p-7">
-                  <p className="eyebrow text-brand">Com método</p>
+                <div className="border-l-2 border-brand/40 py-6 pl-5 md:pl-8">
+                  {i === 0 && <p className="eyebrow mb-4 text-brand">Com método</p>}
                   <p className="mt-3 font-display text-lg">“{pair.after}”</p>
                 </div>
               </div>
@@ -428,7 +418,7 @@ function Landing() {
       </Section>
 
       {/* MÓDULOS */}
-      <section id="modulos" className="border-t border-border px-6 py-24 md:py-36">
+      <section id="modulos" className="editorial-section border-t border-border px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <Eyebrow>{modules.eyebrow}</Eyebrow>
@@ -505,7 +495,7 @@ function Landing() {
       </Section>
 
       {/* PROVAS */}
-      <section className="border-t border-border bg-surface/40 px-6 py-24 md:py-36">
+      <section className="editorial-section border-t border-border bg-surface/40 px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <Eyebrow>{proof.eyebrow}</Eyebrow>
@@ -536,21 +526,20 @@ function Landing() {
             {deliverables.headline}
           </h2>
         </Reveal>
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
+        <div className="mt-12 grid gap-x-12 md:grid-cols-2">
           {deliverables.items.map((item, i) => (
             <Reveal
               key={item.title}
               delay={i * 70}
               className={i === deliverables.items.length - 1 ? "md:col-span-2" : ""}
             >
-              <div className="h-full bg-background p-8 md:p-10">
+              <div className="editorial-item h-full border-t border-border py-8">
+                {(() => { const Icon = [PackageCheck, Compass, RefreshCw, Users, Warehouse][i]; return Icon ? <Icon className="mb-5 h-6 w-6 text-brand" strokeWidth={1.4} /> : null; })()}
                 <p className="font-display text-xl font-semibold">{item.title}</p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                   {item.what.startsWith("[") ? <Placeholder>{item.what}</Placeholder> : item.what}
                 </p>
-                <p className="mt-4 border-l border-brand/50 pl-4 text-sm leading-relaxed text-muted-foreground">
-                  {item.why}
-                </p>
+
               </div>
             </Reveal>
           ))}
@@ -567,129 +556,20 @@ function Landing() {
             {objections.headline}
           </h2>
         </Reveal>
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 divide-y divide-border border-y border-border">
           {objections.items.map((o, i) => (
-            <Reveal key={o.q} delay={i * 70}>
-              <div className="h-full rounded-xl border border-border bg-background p-7">
-                <p className="font-display text-lg">{o.q}</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {o.a.includes("[") ? <Placeholder>{o.a}</Placeholder> : o.a}
-                </p>
-              </div>
+            <Reveal key={o.q} delay={i * 40}>
+              <details className="group py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-medium">{o.q}<ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180" /></summary>
+                <p className="detail-content mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground"><Placeholder>{o.a}</Placeholder></p>
+              </details>
             </Reveal>
           ))}
         </div>
       </Section>
 
       {/* OFERTA */}
-      <Section id="oferta" className="border-t border-border">
-        <Reveal>
-          <Eyebrow>{offer.eyebrow}</Eyebrow>
-        </Reveal>
-        <Reveal delay={80}>
-          <h2 className="mt-8 max-w-3xl text-[clamp(2rem,4.5vw,3.5rem)] font-semibold leading-[1.06]">
-            {offer.headline}
-          </h2>
-        </Reveal>
-        <div className="mt-8 max-w-2xl space-y-3">
-          {offer.lead.map((l, i) => (
-            <Reveal key={l} delay={120 + i * 70}>
-              <p className="text-lg text-muted-foreground">{l}</p>
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
-          <Reveal className="h-full">
-            <div className="flex h-full flex-col rounded-2xl border border-border bg-background p-8 md:p-10">
-              <p className="eyebrow">Está incluído</p>
-              <ul className="mt-6 flex flex-1 flex-col justify-between divide-y divide-border">
-                {offer.includes.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-4 py-4 first:pt-0 last:pb-0"
-                  >
-                    <span className="mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand/30 bg-brand/10">
-                      <Check className="h-3.5 w-3.5 text-brand" strokeWidth={2.6} />
-                    </span>
-                    <span className="text-[1.02rem] leading-snug">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-8 border-t border-border pt-6 text-sm text-muted-foreground">
-                {offer.includesNote}
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={110} className="h-full">
-            <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand/25 bg-surface p-8 shadow-[0_40px_110px_-45px_hsl(38_90%_60%/0.45)] md:p-10">
-              <div className="pointer-events-none absolute -top-28 right-[-15%] h-[320px] w-[320px] rounded-full bg-brand opacity-[0.14] blur-[110px]" />
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/70 to-transparent" />
-
-              <div className="relative">
-                <p className="eyebrow text-brand">Investimento</p>
-                <p className="mt-6 font-display text-[clamp(3rem,6vw,4.25rem)] font-semibold leading-none">
-                  <Placeholder>{offer.price}</Placeholder>
-                </p>
-                <p className="mt-4 text-sm text-muted-foreground">
-                  <Placeholder>{offer.priceNote}</Placeholder>
-                </p>
-                <div className="mt-7">
-                  <span className="inline-flex items-baseline gap-2.5 rounded-full border border-brand/30 bg-brand/10 px-5 py-2.5">
-                    <span className="font-display text-lg font-semibold text-brand-soft">
-                      {offer.installment}
-                    </span>
-                    <span className="text-[0.68rem] uppercase tracking-[0.16em] text-muted-foreground">
-                      {offer.installmentNote}
-                    </span>
-                  </span>
-                </div>
-                <p className="mt-5 text-sm uppercase tracking-[0.14em] text-muted-foreground/90">
-                  {offer.platformNote}
-                </p>
-              </div>
-
-              <div className="relative mt-8 flex items-start gap-4 rounded-xl border border-border bg-background/60 p-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brand/25 bg-brand/10">
-                  <ShieldCheck className="h-5 w-5 text-brand" />
-                </span>
-                <div>
-                  <p className="font-display text-base font-semibold">
-                    <Placeholder>{offer.guaranteeTitle}</Placeholder>
-                  </p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                    {offer.guaranteeText}
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative mt-auto pt-8">
-                <a
-                  href="#oferta"
-                  className="block rounded-full bg-brand px-8 py-4 text-center font-semibold text-brand-foreground transition-transform duration-300 hover:scale-[1.02]"
-                >
-                  {brand.ctaBuy}
-                </a>
-                <p className="mt-4 flex flex-wrap items-center justify-center gap-x-1.5 text-center text-sm text-muted-foreground">
-                  {offer.supportText}
-                  <a
-                    href={contact.whatsappUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 font-semibold text-brand transition-colors hover:text-brand-soft"
-                  >
-                    <WhatsAppIcon className="h-3.5 w-3.5" />
-                    {offer.supportLabel}
-                  </a>
-                  <span aria-hidden="true">·</span>
-                  <span>{contact.phone}</span>
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </Section>
+      <DecisionSection />
 
       {/* FAQ */}
       <Section id="faq" className="border-t border-border bg-surface/40">
@@ -747,7 +627,7 @@ function Landing() {
                     {item.q}
                     <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180" />
                   </summary>
-                  <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                  <p className="detail-content mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
                     {item.a.includes("[") ? <Placeholder>{item.a}</Placeholder> : item.a}
                   </p>
                 </details>
@@ -758,11 +638,7 @@ function Landing() {
       </Section>
 
       {/* CTA FINAL */}
-      <section className="relative border-t border-border px-6 py-32 text-center md:py-44">
-        <div
-          className="pointer-events-none absolute bottom-0 left-1/2 h-[420px] w-[620px] -translate-x-1/2 rounded-full opacity-15 blur-[150px]"
-          style={{ background: "var(--brand)" }}
-        />
+      <section className="editorial-section relative border-t border-border px-6 py-20 text-center md:py-28">
         <div className="relative mx-auto max-w-3xl">
           <Reveal>
             <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-semibold leading-[1.06] text-muted-foreground">
