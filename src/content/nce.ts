@@ -2,19 +2,19 @@
  * Conteúdo da landing page do NCE.
  * O que ainda depende de informação oficial do Nicolas está marcado com [ ].
  */
-import nicolasPhoto from "@/assets/nicolas.png.asset.json";
-import proofRyan from "@/assets/provas/prova-ryan.webp.asset.json";
-import proofIsabel from "@/assets/provas/prova-isabel.webp.asset.json";
-import proofSara from "@/assets/provas/prova-sara.webp.asset.json";
-import proofDaiane from "@/assets/provas/prova-daiane.webp.asset.json";
-import proofAnanda from "@/assets/provas/prova-ananda.webp.asset.json";
-import proofGuilherme from "@/assets/provas/prova-guilherme.webp.asset.json";
-import modulo1 from "@/assets/modulos/modulo-1.webp.asset.json";
-import modulo2 from "@/assets/modulos/modulo-2.webp.asset.json";
-import modulo3 from "@/assets/modulos/modulo-3.webp.asset.json";
-import modulo4 from "@/assets/modulos/modulo-4.webp.asset.json";
-import modulo5 from "@/assets/modulos/modulo-5.webp.asset.json";
-import modulo6 from "@/assets/modulos/modulo-6.webp.asset.json";
+import nicolasPhoto from "@/assets/provas/nicolas.png";
+import proofRyan from "@/assets/provas/prova-ryan.webp";
+import proofIsabel from "@/assets/provas/prova-isabel.webp";
+import proofSara from "@/assets/provas/prova-sara.webp";
+import proofDaiane from "@/assets/provas/prova-daiane.webp";
+import proofAnanda from "@/assets/provas/prova-ananda.webp";
+import proofGuilherme from "@/assets/provas/prova-guilherme.webp";
+import modulo1 from "@/assets/modulos/Módulo 1 — Comece por Aqui.png";
+import modulo2 from "@/assets/modulos/Módulo 2 — Mercado Livre.png";
+import modulo3 from "@/assets/modulos/Módulo 3 — Shopee.png";
+import modulo4 from "@/assets/modulos/Módulo 4 — TikTok Shop.png";
+import modulo5 from "@/assets/modulos/Módulo 5 — Gestão Financeira.png";
+import modulo6 from "@/assets/modulos/Módulo 6 — Materiais e Ferramentas.png";
 
 export const brand = {
   name: "NCE",
@@ -199,12 +199,12 @@ export const modules = {
   headline: "Por dentro do NCE.",
   intro: "Cada módulo do treinamento, na ordem em que a operação é construída.",
   slides: [
-    { id: "m1", src: modulo1.url, alt: "Módulo Comece por Aqui" },
-    { id: "m2", src: modulo2.url, alt: "Módulo Mercado Livre" },
-    { id: "m3", src: modulo3.url, alt: "Módulo Shopee" },
-    { id: "m4", src: modulo4.url, alt: "Módulo TikTok Shop" },
-    { id: "m5", src: modulo5.url, alt: "Módulo Gestão Financeira" },
-    { id: "m6", src: modulo6.url, alt: "Módulo Materiais e Ferramentas" },
+    { id: "m1", src: modulo1, alt: "Módulo Comece por Aqui" },
+    { id: "m2", src: modulo2, alt: "Módulo Mercado Livre" },
+    { id: "m3", src: modulo3, alt: "Módulo Shopee" },
+    { id: "m4", src: modulo4, alt: "Módulo TikTok Shop" },
+    { id: "m5", src: modulo5, alt: "Módulo Gestão Financeira" },
+    { id: "m6", src: modulo6, alt: "Módulo Materiais e Ferramentas" },
   ] as ModuleSlide[],
 };
 
@@ -221,7 +221,7 @@ export const author = {
     { label: "Faturamento atual", value: "~R$ 800 mil/mês" },
     { label: "Canais principais", value: "Shopee e ML" },
   ],
-  photo: nicolasPhoto.url,
+  photo: nicolasPhoto,
 };
 
 export const proof = {
@@ -230,12 +230,12 @@ export const proof = {
   intro:
     "Resultados e feedbacks reais de quem está aplicando o método.",
   slides: [
-    { id: "p1", src: proofRyan.url, alt: "Faturamento e margem de aluno do NCE" },
-    { id: "p2", src: proofIsabel.url, alt: "Resultado de vendas de aluna do NCE" },
-    { id: "p3", src: proofSara.url, alt: "Relatório de vendas de aluna do NCE" },
-    { id: "p4", src: proofDaiane.url, alt: "Crescimento de vendas de aluna do NCE" },
-    { id: "p5", src: proofAnanda.url, alt: "Crescimento de aluna do NCE" },
-    { id: "p6", src: proofGuilherme.url, alt: "Resultado de vendas de aluno do NCE" },
+    { id: "p1", src: proofRyan, alt: "Faturamento e margem de aluno do NCE" },
+    { id: "p2", src: proofIsabel, alt: "Resultado de vendas de aluna do NCE" },
+    { id: "p3", src: proofSara, alt: "Relatório de vendas de aluna do NCE" },
+    { id: "p4", src: proofDaiane, alt: "Crescimento de vendas de aluna do NCE" },
+    { id: "p5", src: proofAnanda, alt: "Crescimento de aluna do NCE" },
+    { id: "p6", src: proofGuilherme, alt: "Resultado de vendas de aluno do NCE" },
   ] as ModuleSlide[],
 };
 
