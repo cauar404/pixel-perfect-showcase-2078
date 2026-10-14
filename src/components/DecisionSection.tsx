@@ -40,7 +40,7 @@ export function DecisionSection() {
                 <p className="text-sm"><span className="font-semibold text-foreground">{offer.installment}</span><span className="ml-2 text-muted-foreground">{offer.installmentNote}</span></p>
               </div>
               <Button asChild className="mt-7 h-auto w-full justify-between whitespace-normal rounded-md px-5 py-4 text-sm font-semibold transition-transform duration-300 hover:-translate-y-0.5">
-                <a href="#oferta">{brand.ctaBuy}<ArrowUpRight aria-hidden="true" /></a>
+                <a href="https://pay.kiwify.com.br/vx7MPrd">{brand.ctaBuy}<ArrowUpRight aria-hidden="true" /></a>
               </Button>
               <p className="mt-3 text-center text-xs text-muted-foreground">{offer.platformNote}</p>
               <div className="mt-7 flex items-start gap-3 border-t border-border pt-6">
