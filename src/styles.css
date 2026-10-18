@@ -166,6 +166,7 @@
 }
 .sunlit-section {
   background: var(--editorial-yellow);
+  color: var(--editorial-ink);
   --foreground: var(--editorial-ink);
   --muted-foreground: var(--editorial-ink-muted);
   --border: var(--editorial-ink-border);
