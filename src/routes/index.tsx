@@ -164,7 +164,7 @@ function Landing() {
       <Header />
 
       {/* HERO */}
-      <section className="relative flex min-h-screen items-center px-6 pt-32 pb-20">
+      <section className="relative mx-auto flex min-h-screen w-full max-w-[1920px] items-center px-6 pt-32 pb-20 lg:h-[1080px] lg:min-h-0">
         <div className="grid-lines pointer-events-none absolute inset-0 opacity-60 [mask-image:radial-gradient(70%_60%_at_50%_30%,black,transparent)]" />
         <div
           className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full opacity-20 blur-[140px]"
