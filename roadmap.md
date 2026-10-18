@@ -6,3 +6,5 @@
 - [ ] Refinar hierarquia e reduzir o peso de texto sem alterar a abertura aprovada.
 - [ ] Redesenhar a seção A decisão com composição minimalista profissional.
 - [ ] Melhorar entradas e verificar navegação e leitura em telas grandes e pequenas.
+- [ ] Antecipar módulos, Nicolas e provas com sequência conectada.
+- [ ] Aplicar faixas amarelas e títulos marca-texto discretos; verificar leitura e carrosséis.
