@@ -8,3 +8,4 @@
 - [x] Melhorar entradas e verificar navegação e leitura em telas grandes e pequenas.
 - [x] Antecipar módulos, Nicolas e provas com sequência conectada.
 - [x] Aplicar faixas amarelas e títulos marca-texto discretos; verificar leitura e carrosséis.
+- [ ] Unificar fundos e marca-textos no âmbar solicitado e ampliar a presença de cor sem alterar a abertura.
