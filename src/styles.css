@@ -41,6 +41,7 @@
   --color-brand-foreground: var(--brand-foreground);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-editorial-yellow: var(--editorial-yellow);
   --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --shadow-decision: var(--decision-shadow);
@@ -76,6 +77,10 @@
   --input: oklch(1 0 0 / 14%);
   --ring: var(--brand);
   --decision-shadow: 0 24px 64px -32px oklch(0 0 0 / 55%);
+  --editorial-yellow: oklch(0.87 0.15 90);
+  --editorial-ink: oklch(0.2 0.015 80);
+  --editorial-ink-muted: oklch(0.36 0.025 80);
+  --editorial-ink-border: oklch(0.2 0.015 80 / 22%);
 }
 
 @layer base {
@@ -152,6 +157,23 @@
 .editorial-section .editorial-item { transition: border-color 300ms, background-color 300ms; }
 .editorial-section .editorial-item:hover { border-color: var(--brand); }
 .decision-price { font-variant-numeric: tabular-nums; }
+.editorial-mark {
+  color: var(--brand-foreground);
+  background: var(--editorial-yellow);
+  padding: 0.02em 0.16em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.sunlit-section {
+  background: var(--editorial-yellow);
+  color: var(--editorial-ink);
+  --foreground: var(--editorial-ink);
+  --muted-foreground: var(--editorial-ink-muted);
+  --border: var(--editorial-ink-border);
+  --brand: var(--editorial-ink);
+  --brand-soft: var(--editorial-ink);
+  --brand-foreground: var(--editorial-yellow);
+}
 @keyframes detail-enter {
   from { opacity: 0; transform: translateY(-6px); }
   to { opacity: 1; transform: translateY(0); }
