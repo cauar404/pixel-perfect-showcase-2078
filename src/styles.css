@@ -77,7 +77,9 @@
   --input: oklch(1 0 0 / 14%);
   --ring: var(--brand);
   --decision-shadow: 0 24px 64px -32px oklch(0 0 0 / 55%);
-  --editorial-yellow: oklch(0.87 0.15 90);
+  --editorial-yellow: oklch(80% .152 80);
+  --editorial-tint: color-mix(in oklch, var(--background) 92%, var(--editorial-yellow));
+  --editorial-tint-border: color-mix(in oklch, var(--editorial-yellow) 28%, transparent);
   --editorial-ink: oklch(0.2 0.015 80);
   --editorial-ink-muted: oklch(0.36 0.025 80);
   --editorial-ink-border: oklch(0.2 0.015 80 / 22%);
@@ -157,6 +159,20 @@
 .editorial-section .editorial-item { transition: border-color 300ms, background-color 300ms; }
 .editorial-section .editorial-item:hover { border-color: var(--brand); }
 .decision-price { font-variant-numeric: tabular-nums; }
+.amber-section {
+  background: var(--editorial-tint);
+  border-color: var(--editorial-tint-border);
+}
+.amber-detail {
+  background: var(--editorial-tint);
+  border-color: var(--editorial-tint-border);
+}
+.amber-heading {
+  background: var(--editorial-yellow);
+  color: var(--editorial-ink);
+  --muted-foreground: var(--editorial-ink-muted);
+  --border: var(--editorial-ink-border);
+}
 .editorial-mark {
   color: var(--brand-foreground);
   background: var(--editorial-yellow);

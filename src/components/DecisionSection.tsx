@@ -6,7 +6,7 @@ import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export function DecisionSection() {
   return (
-    <section id="oferta" className="editorial-section border-t border-border bg-surface/30 px-6 py-20 md:py-28">
+    <section id="oferta" className="amber-section editorial-section border-t border-border px-6 py-20 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
         <Reveal direction="left">
           <p className="eyebrow flex items-center gap-3"><span className="h-px w-8 bg-brand" />{offer.eyebrow}</p>
@@ -27,7 +27,7 @@ export function DecisionSection() {
 
         <Reveal direction="right" delay={120}>
           <div className="overflow-hidden rounded-lg border border-brand/30 bg-card shadow-decision">
-            <div className="flex items-center justify-between border-b border-border px-6 py-5 sm:px-8">
+            <div className="amber-heading flex items-center justify-between gap-3 border-b border-border px-6 py-5 sm:px-8">
               <span className="font-display text-sm font-semibold">Método NCE</span>
               <span className="text-xs text-muted-foreground">12 meses de acesso</span>
             </div>

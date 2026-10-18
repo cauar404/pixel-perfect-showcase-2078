@@ -229,7 +229,7 @@ function Landing() {
       </section>
 
       {/* O QUE É O NCE */}
-      <Section id="nce" className="border-t border-border bg-surface/40">
+      <Section id="nce" className="sunlit-section border-t border-border">
         <Reveal>
           <Eyebrow>{what.eyebrow}</Eyebrow>
         </Reveal>
@@ -273,7 +273,7 @@ function Landing() {
       </Section>
 
       {/* MÓDULOS */}
-      <section id="modulos" className="editorial-section border-t border-border px-6 py-20 md:py-28">
+      <section id="modulos" className="amber-section editorial-section border-t border-border px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <Eyebrow>{modules.eyebrow}</Eyebrow>
@@ -315,8 +315,8 @@ function Landing() {
               )}
               <div className="mt-6 grid grid-cols-3 gap-4">
                 {author.facts.map((f) => (
-                  <div key={f.label} className="rounded-lg border border-border p-4">
-                    <p className="font-display text-base text-brand">
+                  <div key={f.label} className="amber-heading rounded-lg border border-border p-4">
+                    <p className="font-display text-base">
                       <Placeholder>{f.value}</Placeholder>
                     </p>
                     <p className="mt-1 text-[0.7rem] uppercase tracking-widest text-muted-foreground">
@@ -350,7 +350,7 @@ function Landing() {
       </Section>
 
       {/* PROVAS */}
-      <section className="editorial-section border-t border-border bg-surface/40 px-6 py-20 md:py-28">
+      <section className="amber-section editorial-section border-t border-border px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <Eyebrow>{proof.eyebrow}</Eyebrow>
@@ -506,7 +506,7 @@ function Landing() {
                   {i === 0 && <p className="eyebrow mb-4">Sem método</p>}
                   <p className="mt-3 text-muted-foreground">“{pair.before}”</p>
                 </div>
-                <div className="border-l-2 border-brand/40 py-6 pl-5 md:pl-8">
+                <div className="amber-detail border-l-2 border-brand/40 py-6 pl-5 md:pl-8">
                   {i === 0 && <p className="eyebrow mb-4 text-brand">Com método</p>}
                   <p className="mt-3 font-display text-lg">“{pair.after}”</p>
                 </div>
