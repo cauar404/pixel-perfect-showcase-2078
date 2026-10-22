@@ -10,3 +10,4 @@
 - [x] Aplicar faixas amarelas e títulos marca-texto discretos; verificar leitura e carrosséis.
 - [x] Unificar fundos e marca-textos no âmbar solicitado e ampliar a presença de cor sem alterar a abertura; conferir computador e celular.
 - [x] Ajustes de conteúdo: remover sorteios de "O que você recebe", novo título de objeções, canais principais com TikTok Shop e preço antigo riscado na oferta.
+- [x] Adicionar as quatro novas provas ao carrossel e destacar a de maior resultado, no meio da sequência.

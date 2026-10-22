@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ModuleSlide } from "@/content/nce";
+import { cn } from "@/lib/utils";
 
 /**
  * Carrossel horizontal dos módulos do NCE.
@@ -182,14 +183,24 @@ export function ModulesCarousel({
                 onClick={() => {
                   if (!drag.current.moved) scrollToIndex(i);
                 }}
-                className={`relative shrink-0 snap-center transition-all duration-700 ease-out ${size.item} ${
-                  isActive ? "scale-100 opacity-100" : "scale-[0.94] opacity-45"
-                } ${i === 0 ? size.first : ""} ${i === slides.length - 1 ? size.last : ""}`}
+                className={cn(
+                  "relative shrink-0 snap-center transition-all duration-700 ease-out",
+                  size.item,
+                  slide.featured && "max-w-[330px] sm:w-[41%] lg:w-[25%]",
+                  isActive ? "scale-100 opacity-100" : "scale-[0.94] opacity-45",
+                  i === 0 && size.first,
+                  i === slides.length - 1 && size.last,
+                )}
               >
                 <div
-                  className={`overflow-hidden rounded-2xl border transition-all duration-700 ${
-                    isActive ? "border-brand/40 brand-glow" : "border-border"
-                  }`}
+                  className={cn(
+                    "overflow-hidden rounded-2xl border transition-all duration-700",
+                    isActive
+                      ? "border-brand/40 brand-glow"
+                      : slide.featured
+                        ? "border-brand/25"
+                        : "border-border",
+                  )}
                 >
                   {slide.src ? (
                     <img
