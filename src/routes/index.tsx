@@ -315,7 +315,7 @@ function Landing() {
               )}
               <div className="mt-6 grid grid-cols-2 gap-4">
                 {author.facts.map((f) => (
-                  <div key={f.label} className={`amber-heading flex flex-col justify-between gap-3 rounded-lg border border-border p-4 ${f.value.length > 12 ? "col-span-2" : ""}`}>
+                  <div key={f.label} className={`amber-heading flex flex-col justify-between gap-3 rounded-lg border border-border p-4 ${f.wide ? "col-span-2" : ""}`}>
                     <p className="font-display text-base leading-snug">
                       <Placeholder>{f.value}</Placeholder>
                     </p>

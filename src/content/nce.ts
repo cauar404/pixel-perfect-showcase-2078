@@ -219,8 +219,8 @@ export const author = {
   facts: [
     { label: "Início nos marketplaces", value: "2024" },
     { label: "Faturamento atual", value: "~R$ 800 mil/mês" },
-    { label: "Canais principais", value: "Shopee, Mercado Livre e TikTok Shop" },
-  ],
+    { label: "Canais principais", value: "Shopee, Mercado Livre e TikTok Shop", wide: true },
+  ] as { label: string; value: string; wide?: boolean }[],
   photo: nicolasPhoto,
 };
 

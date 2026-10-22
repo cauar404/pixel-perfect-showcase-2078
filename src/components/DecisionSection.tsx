@@ -33,7 +33,7 @@ export function DecisionSection() {
             </div>
             <div className="px-6 py-8 sm:px-8 sm:py-9">
               <p className="eyebrow">Investimento</p>
-              <p className="mt-5 flex flex-wrap items-baseline gap-x-2 text-sm text-muted-foreground">
+              <p className="mt-5 flex flex-wrap items-baseline gap-x-1.5 text-sm text-muted-foreground">
                 <span>De</span>
                 <span className="line-through decoration-muted-foreground/70">{offer.priceOld}</span>
                 <span className="text-brand">por</span>
