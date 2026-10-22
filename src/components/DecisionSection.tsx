@@ -35,8 +35,8 @@ export function DecisionSection() {
               <p className="eyebrow">Investimento</p>
               <p className="mt-5 flex flex-wrap items-baseline gap-x-2 text-sm text-muted-foreground">
                 <span>De</span>
-                <span className="line-through decoration-brand/70 decoration-2">{offer.priceOld}</span>
-                <span>por</span>
+                <span className="line-through decoration-muted-foreground/70">{offer.priceOld}</span>
+                <span className="text-brand">por</span>
               </p>
               <p className="decision-price mt-1 font-display text-5xl font-semibold leading-none sm:text-6xl">{offer.price}</p>
               <p className="mt-3 text-sm text-muted-foreground">{offer.priceNote}</p>

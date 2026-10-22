@@ -313,13 +313,13 @@ function Landing() {
                   <Placeholder>{author.photo}</Placeholder>
                 </div>
               )}
-              <div className="mt-6 grid grid-cols-3 gap-4">
+              <div className="mt-6 grid grid-cols-2 gap-4">
                 {author.facts.map((f) => (
-                  <div key={f.label} className="amber-heading rounded-lg border border-border p-4">
-                    <p className="font-display text-base">
+                  <div key={f.label} className={`amber-heading flex flex-col justify-between gap-3 rounded-lg border border-border p-4 ${f.value.length > 12 ? "col-span-2" : ""}`}>
+                    <p className="font-display text-base leading-snug">
                       <Placeholder>{f.value}</Placeholder>
                     </p>
-                    <p className="mt-1 text-[0.7rem] uppercase tracking-widest text-muted-foreground">
+                    <p className="text-[0.7rem] uppercase tracking-widest text-muted-foreground">
                       {f.label}
                     </p>
                   </div>
