@@ -33,7 +33,12 @@ export function DecisionSection() {
             </div>
             <div className="px-6 py-8 sm:px-8 sm:py-9">
               <p className="eyebrow">Investimento</p>
-              <p className="decision-price mt-5 font-display text-5xl font-semibold leading-none sm:text-6xl">{offer.price}</p>
+              <p className="mt-5 flex flex-wrap items-baseline gap-x-1.5 text-sm text-muted-foreground">
+                <span>De</span>
+                <span className="line-through decoration-muted-foreground/70">{offer.priceOld}</span>
+                <span className="text-brand">por</span>
+              </p>
+              <p className="decision-price mt-1 font-display text-5xl font-semibold leading-none sm:text-6xl">{offer.price}</p>
               <p className="mt-3 text-sm text-muted-foreground">{offer.priceNote}</p>
               <div className="mt-6 flex items-center gap-3 border-y border-border py-5">
                 <CreditCard className="h-5 w-5 shrink-0 text-brand" />

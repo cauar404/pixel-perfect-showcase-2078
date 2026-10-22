@@ -219,8 +219,8 @@ export const author = {
   facts: [
     { label: "Início nos marketplaces", value: "2024" },
     { label: "Faturamento atual", value: "~R$ 800 mil/mês" },
-    { label: "Canais principais", value: "Shopee e ML" },
-  ],
+    { label: "Canais principais", value: "Shopee, Mercado Livre e TikTok Shop", wide: true },
+  ] as { label: string; value: string; wide?: boolean }[],
   photo: nicolasPhoto,
 };
 
@@ -263,17 +263,12 @@ export const deliverables = {
       what: "Um grupo com os demais alunos do treinamento para troca entre quem está operando.",
       why: "Conversar com quem enfrenta os mesmos problemas encurta decisões que sozinho demorariam semanas.",
     },
-    {
-      title: "Sorteios de visita à operação",
-      what: "Sorteios para conhecer pessoalmente a operação real do Nicolas em São Paulo.",
-      why: "Ver o galpão, o processo e a rotina funcionando explica o que nenhuma aula consegue descrever.",
-    },
   ],
 };
 
 export const objections = {
   eyebrow: "Antes de decidir",
-  headline: "O NCE faz sentido para você?",
+  headline: "O Método NCE faz sentido pra você",
   items: [
     {
       q: "E se eu ainda estiver começando?",
@@ -316,6 +311,7 @@ export const offer = {
     "Sorteios para visitar a operação real em São Paulo",
   ],
   includesNote: "Estes são os itens atuais da oferta. Nada além disso é prometido.",
+  priceOld: "R$ 369,90",
   price: "R$ 179,90",
   priceNote: "Pix à vista ou cartão de crédito.",
   installment: "8x de R$ 26,16",
