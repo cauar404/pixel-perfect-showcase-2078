@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, BarChart3, ChevronDown, Compass, Instagram, Layers3, Mail, PackageCheck, RefreshCw, Users, Warehouse } from "lucide-react";
+import { ArrowUpRight, BarChart3, ChevronDown, Compass, Instagram, Layers3, Mail, PackageCheck, RefreshCw, Users } from "lucide-react";
 import { DecisionSection } from "@/components/DecisionSection";
 import logoUrl from "@/assets/logo.svg";
 import { Reveal } from "@/components/Reveal";
@@ -531,10 +531,9 @@ function Landing() {
             <Reveal
               key={item.title}
               delay={i * 70}
-              className={i === deliverables.items.length - 1 ? "md:col-span-2" : ""}
             >
               <div className="editorial-item h-full border-t border-border py-8">
-                {(() => { const Icon = [PackageCheck, Compass, RefreshCw, Users, Warehouse][i]; return Icon ? <Icon className="mb-5 h-6 w-6 text-brand" strokeWidth={1.4} /> : null; })()}
+                {(() => { const Icon = [PackageCheck, Compass, RefreshCw, Users][i]; return Icon ? <Icon className="mb-5 h-6 w-6 text-brand" strokeWidth={1.4} /> : null; })()}
                 <p className="font-display text-xl font-semibold">{item.title}</p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                   {item.what.startsWith("[") ? <Placeholder>{item.what}</Placeholder> : item.what}
