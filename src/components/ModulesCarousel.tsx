@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ModuleSlide } from "@/content/nce";
+import { cn } from "@/lib/utils";
 
 /**
  * Carrossel horizontal dos módulos do NCE.
