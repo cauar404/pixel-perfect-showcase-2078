@@ -9,6 +9,10 @@ import proofSara from "@/assets/provas/prova-sara.webp";
 import proofDaiane from "@/assets/provas/prova-daiane.webp";
 import proofAnanda from "@/assets/provas/prova-ananda.webp";
 import proofGuilherme from "@/assets/provas/prova-guilherme.webp";
+import proofGabriel from "@/assets/provas/prova-gabriel.webp.asset.json";
+import proofBruno from "@/assets/provas/prova-bruno.webp.asset.json";
+import proofAna from "@/assets/provas/prova-ana.webp.asset.json";
+import proofRodrigo from "@/assets/provas/prova-rodrigo.webp.asset.json";
 import modulo1 from "@/assets/modulos/Módulo 1 — Comece por Aqui.png";
 import modulo2 from "@/assets/modulos/Módulo 2 — Mercado Livre.png";
 import modulo3 from "@/assets/modulos/Módulo 3 — Shopee.png";
@@ -192,6 +196,8 @@ export type ModuleSlide = {
   src?: string;
   /** Texto alternativo (acessibilidade). Não é exibido quando há imagem. */
   alt: string;
+  /** Destaque do carrossel: card um pouco maior e fileira âmbar permanente. */
+  featured?: boolean;
 };
 
 export const modules = {
@@ -234,8 +240,17 @@ export const proof = {
     { id: "p2", src: proofIsabel, alt: "Resultado de vendas de aluna do NCE" },
     { id: "p3", src: proofSara, alt: "Relatório de vendas de aluna do NCE" },
     { id: "p4", src: proofDaiane, alt: "Crescimento de vendas de aluna do NCE" },
-    { id: "p5", src: proofAnanda, alt: "Crescimento de aluna do NCE" },
-    { id: "p6", src: proofGuilherme, alt: "Resultado de vendas de aluno do NCE" },
+    {
+      id: "p5",
+      src: proofGabriel.url,
+      alt: "Mais de R$ 28 mil em vendas no período de aluno do NCE",
+      featured: true,
+    },
+    { id: "p6", src: proofAnanda, alt: "Crescimento de aluna do NCE" },
+    { id: "p7", src: proofGuilherme, alt: "Resultado de vendas de aluno do NCE" },
+    { id: "p8", src: proofBruno.url, alt: "Recorde de vendas de aluno do NCE: R$ 7,1 mil em um dia" },
+    { id: "p9", src: proofAna.url, alt: "Crescimento de vendas de aluna do NCE na Shopee" },
+    { id: "p10", src: proofRodrigo.url, alt: "Recorde diário de vendas de aluno do NCE na Shopee" },
   ] as ModuleSlide[],
 };
 
