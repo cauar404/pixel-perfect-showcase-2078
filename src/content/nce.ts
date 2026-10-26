@@ -22,7 +22,7 @@ import modulo6 from "@/assets/modulos/Módulo 6 — Materiais e Ferramentas.png"
 
 export const brand = {
   name: "NCE",
-  eyebrow: "NCE • Método de e-commerce",
+  eyebrow: "Método NCE",
   ctaPrimary: "Conhecer o método NCE",
   ctaSecondary: "Entender como funciona",
   ctaBuy: "Quero entrar para o NCE",
